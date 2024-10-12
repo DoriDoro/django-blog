@@ -1,5 +1,6 @@
 black==24.8.0
 click==8.1.7
 Django==5.1.1
+django-taggit==6.1.0
 flake8==7.1.1
 ipython==8.27.0

@@ -5,7 +5,10 @@ from blog import views
 app_name = "blog"
 
 urlpatterns = [
+    # path("", views.post_list, name="post_list"),
+    # path("tag/<slug:tag_slug>/", views.post_list, name="post_list_by_tag"),
     path("", views.PostListView.as_view(), name="post_list"),
+    path("tag/<slug:tag_slug>/", views.PostListView.as_view(), name="post_list_by_tag"),
     path(
         "<slug:slug>/",
         views.PostDetailView.as_view(),

@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from taggit.managers import TaggableManager
 
 
 class PublishedManager(models.Manager):
@@ -23,6 +24,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         "account.User", on_delete=models.CASCADE, related_name="blog_posts"
     )
+    tags = TaggableManager()
 
     objects = models.Manager()  # The default manager.
     published = PublishedManager()  # Our custom manager.
