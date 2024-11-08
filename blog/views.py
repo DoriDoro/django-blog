@@ -1,5 +1,5 @@
 from django.core.mail import send_mail
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.db.models import Count
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.http import require_POST
 from django.views.generic import ListView, DetailView
@@ -7,26 +7,6 @@ from taggit.models import Tag
 
 from blog.forms import EmailPostForm, CommentForm
 from blog.models import Post
-
-
-# def post_list(request, tag_slug=None):
-#     post_list = Post.published.all()
-#     tag = None
-#     if tag_slug:
-#         tag = get_object_or_404(Tag, slug=tag_slug)
-#         post_list = post_list.filter(tags__in=[tag])
-#     # Pagination with 3 posts per page
-#     paginator = Paginator(post_list, 3)
-#     page_number = request.GET.get("page", 1)
-#     try:
-#         posts = paginator.page(page_number)
-#     except PageNotAnInteger:
-#         # If page_number is not an integer get the first page
-#         posts = paginator.page(1)
-#     except EmptyPage:
-#         # If page_number is out of range get last page of results
-#         posts = paginator.page(paginator.num_pages)
-#     return render(request, "post/list.html", {"posts": posts, "tag": tag})
 
 
 class PostListView(ListView):
@@ -48,8 +28,6 @@ class PostListView(ListView):
         tag_slug = self.kwargs.get("tag_slug")
         if tag_slug:
             context["tags"] = get_object_or_404(Tag, slug=tag_slug)
-        else:
-            context["tags"] = None
         return context
 
 
@@ -69,7 +47,18 @@ class PostDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context["comments"] = self.object.comments.filter(active=True)
         context["form"] = CommentForm()
+        context["similar_posts"] = self._get_similar_posts()
         return context
+
+    def _get_similar_posts(self):
+        post_tags_ids = self.object.tags.values_list("id", flat=True)
+        similar_posts = Post.published.filter(tags__in=post_tags_ids).exclude(
+            id=self.object.id
+        )
+        similar_posts = similar_posts.annotate(same_tags=Count("tags")).order_by(
+            "-same_tags", "-publish"
+        )[:4]
+        return similar_posts
 
 
 def post_share(request, post_id):
