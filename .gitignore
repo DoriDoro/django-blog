@@ -19,6 +19,7 @@ core/staticfiles
 
 # Local configuration
 settings-local.py
+.env
 todo.txt
 
 htmlcov/
@@ -37,3 +38,6 @@ Thumbs.db
 # management commands
 account/management
 blog/management
+
+# json database
+blog_project.json
