@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.db.models import Count
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.http import require_POST
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, FormView
 from taggit.models import Tag
 
 from blog.forms import EmailPostForm, CommentForm, SearchForm
@@ -95,18 +95,38 @@ def post_share(request, post_id):
     )
 
 
-@require_POST
-def post_comment(request, post_id):
-    post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
-    comment = None
-    form = CommentForm(data=request.POST)
-    if form.is_valid():
+class PostCommentView(FormView):
+    template_name = "post/comment.html"
+    form_class = CommentForm
+
+    def form_valid(self, form):
+        post_id = self.kwargs["post_id"]
+        post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
         comment = form.save(commit=False)
         comment.post = post
         comment.save()
-    return render(
-        request, "post/comment.html", {"post": post, "form": form, "comment": comment}
-    )
+        return render(
+            self.request,
+            self.template_name,
+            {
+                "post": post,
+                "form": form,
+                "comment": comment,
+            },
+        )
+
+    def form_invalid(self, form):
+        post_id = self.kwargs["post_id"]
+        post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
+        return render(
+            self.request,
+            self.template_name,
+            {
+                "post": post,
+                "form": form,
+                "comment": None,
+            },
+        )
 
 
 def post_search(request):
