@@ -1,33 +1,55 @@
 {% extends "base.html" %}
 {% load blog_tags %}
 
-{% block title %} Django Blog {% endblock %}
+{% block title %} - Dori's Python Life in Words {% endblock %}
 
 {% block content %}
-  <h1>Dori's Python Life in Words</h1>
-  {% if tag %}
-    <h2>Posts tagged with "{{ tag.name }}"</h2>
-  {% endif %}
-  {% for post in posts %}
-    <h2>
-      <a href="{{ post.get_absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-  {% if post.tags.exists %}
-  <p class="tags">
-    <strong>Tags:</strong>
-    {% for tag in post.tags.all %}
-      <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
-        {{ tag.name }}
-      </a>{% if not forloop.last %}, {% endif %}
-    {% endfor %}
-  </p>
-  {% endif %}
-  <p class="date">
-    Published {{ post.publish }} by {{ post.author }}
-  </p>
-  {{ post.body|markdown|truncatewords:30 }}
-  {% endfor %}
-  {% include "pagination.html" with page=page_obj %}
+  <!-- Blog Post (Right Sidebar) Start -->
+  <div class="col-md-9">
+    <div class="col-md-12 page-body">
+      <div class="row">
+        <div class="sub-title">
+          <h2>Dori's Python Life in Words</h2>
+          <a href="contact.html"><i class="icon-envelope"></i></a>
+        </div>
+
+        {% if tag %}
+        <div class="sub-title">
+            <h2>Posts tagged with "{{ tag.name }}"</h2>
+        </div>
+        {% endif %}
+
+        <!-- Blog Post Start -->
+        <div class="col-md-12 content-page">
+          {% for post in posts %}
+            <div class="post-title">
+              <a href="{{ post.get_absolute_url }}">
+                <h1>{{ post.title }}</h1>
+              </a>
+            </div>
+            {% if post.tags.exists %}
+              <p>
+                <strong>Tags:</strong>
+                {% for tag in post.tags.all %}
+                  <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
+                    {{ tag.name }}
+                  </a>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+              </p>
+              {% endif %}
+
+            <div class="post-info">
+              <span>Published {{ post.publish }} by {{ post.author }}</span>
+            </div>
+            <div class="post-body">
+              {{ post.body|markdown|truncatewords:30 }}
+              {% if not forloop.last %} <hr> {% endif %}
+            </div>
+          {% endfor %}
+
+        </div>
+          {% include "pagination.html" with page=page_obj %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

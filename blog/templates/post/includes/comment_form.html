@@ -1,7 +1,24 @@
-<h2>Add a comment</h2>
-<form action="{% url 'blog:post_comment' post.id %}" method="post">
-  {% csrf_token %}
-  <div>{{ form.user.as_field_group }}</div>
-  <div>{{ form.body.as_field_group }}</div>
-  <p><input type="submit" value="Add comment"></p>
-</form>
+<div class="row post-comment">
+  <div class="col-md-10">
+
+    <div class="row">
+      <!-- Add a Comment - Start -->
+      <h2>Add a new comment</h2>
+      <form action="{% url 'blog:post_comment' post.id %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label class="form-label">Select User</label>
+          {{ form.user }}
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your comment</label>
+          {{ form.body }}
+        </div>
+        <p>
+          <input class="btn btn-secondary" type="submit" value="Add comment">
+        </p>
+      </form>
+    <!-- Add a Comment - End -->
+    </div>
+  </div>
+</div>

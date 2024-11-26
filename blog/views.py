@@ -2,7 +2,6 @@ from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.core.mail import send_mail
 from django.db.models import Count
 from django.shortcuts import get_object_or_404, render
-from django.views.decorators.http import require_POST
 from django.views.generic import ListView, DetailView, FormView
 from taggit.models import Tag
 
@@ -28,7 +27,7 @@ class PostListView(ListView):
         context = super().get_context_data(**kwargs)
         tag_slug = self.kwargs.get("tag_slug")
         if tag_slug:
-            context["tags"] = get_object_or_404(Tag, slug=tag_slug)
+            context["tag"] = get_object_or_404(Tag, slug=tag_slug)
         return context
 
 

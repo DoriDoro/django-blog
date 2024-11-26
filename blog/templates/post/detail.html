@@ -1,42 +1,68 @@
 {% extends "base.html" %}
 {% load blog_tags %}
 
-{% block title %} {{ post.title }} {% endblock %}
+{% block title %} - {{ post.title }} {% endblock %}
 
 {% block content %}
-  <h1>{{ post.title }}</h1>
+  <div class="col-md-9">
+    <div class="col-md-12 page-body">
+      <div class="row">
+        <!-- Detailed Post - Start -->
+        <div class="sub-title">
+          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h2>Back</h2></a>
+          <a href="{% url 'blog:post_share' post.id %}" class="smoth-scroll" title="Send recommendation via Email"><i class="icon-bubbles"></i></a>
+        </div>
 
-  <p class="date">
-    Published {{ post.publish }} by {{ post.author }}
-  </p>
-  {{ post.body|markdown }}
-  <p>
-    <a href="{% url 'blog:post_share' post.id %}">Share this post.</a>
-  </p>
+        <div class="col-md-12 content-page">
+          <div class="col-md-12 blog-post">
+            <!-- Post Headline - Start -->
+            <div class="post-title">
+             <h1>{{ post.title }}</h1>
+            </div>
+            <!-- Post Headline - End -->
 
-  <h2>Similar posts</h2>
-  {% for post in similar_posts %}
-    <p>
-      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-    </p>
-  {% empty %}
-    There are no similar posts yet.
-  {% endfor %}
+            <!-- Post Detail - Start -->
+            <div class="post-info">
+              <span>Published {{ post.publish }} by <a href="#" target="_blank">{{ post.author }}</a></span>
+            </div>
+            <!-- Post Detail - End -->
 
-  {% with comments.count as total_comments %}
-    <h2>
-      {{ total_comments }} comment{{ total_comments|pluralize }}
-    </h2>
-  {% endwith %}
-  {% for comment in comments %}
-    <div class="comment">
-      <p class="info">
-        Comment {{ forloop.counter }} by <strong>{{ comment.user.username }}</strong> {{ comment.created }}
-      </p>
-      {{ comment.body|linebreaks }}
+            <p>{{ post.body|markdown }}</p>
+
+            <!-- Similar Post - Start -->
+            <h2>Similar posts</h2>
+            {% for post in similar_posts %}
+              <p>
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+              </p>
+            {% empty %}
+              There are no similar posts yet.
+            {% endfor %}
+            <!-- Similar Post - End -->
+          </div>
+        </div>
+
+        <!-- Comments - Start -->
+        <div class="col-md-12 post-comment">
+          {% with comments.count as total_comments %}
+            <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
+          {% endwith %}
+          {% for comment in comments %}
+            <div>
+              <p>
+                Comment {{ forloop.counter }} by <strong>{{ comment.user.username }}</strong> {{ comment.created }}
+              </p>
+              {{ comment.body|linebreaks }}
+            </div>
+          {% empty %}
+            <p>There are no comments.</p>
+          {% endfor %}
+          {% include "post/includes/comment_form.html" %}
+        </div>
+        <!-- Comments - End -->
+
+      </div>
+      <!-- Detailed Post - End -->
     </div>
-  {% empty %}
-    <p>There are no comments.</p>
-  {% endfor %}
-  {% include "post/includes/comment_form.html" %}
+  </div>
 {% endblock %}

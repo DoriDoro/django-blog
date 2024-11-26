@@ -31,3 +31,7 @@ practices.
   
 - **Search Functionality**:
   - Implemented a full-text search engine using Django and PostgreSQL.
+
+
+## Integrate a free HTML-CSS template:
+https://www.free-css.com/free-css-templates/page212/devblog
