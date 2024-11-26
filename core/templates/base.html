@@ -9,11 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- SEO -->
-    <meta name="description" content="150 words">
-    <meta name="author" content="uipasta">
-    <meta name="url" content="http://www.yourdomainname.com">
-    <meta name="copyright" content="company name">
-    <meta name="robots" content="index,follow">
+    <meta name="description" content="Explore Dori's Python Life in Words, a Django-powered blog project featuring advanced search, SEO, tagging, and a seamless user experience. Built with PostgreSQL, Docker, and best practices, it offers scalable and feature-rich blogging with modern web technologies.">
+    <meta name="author" content="Dorothea Reher">
+    <meta name="url" content="http://www.dorothea-reher.com">
+    <meta name="copyright" content="Dorothea Reher">
+    <meta name="robots" content="{% block meta_robots %}index, follow{% endblock %}">
+    <meta name="keywords" content="Django, Blog, Portfolio, Dorothea Reher, HTML, CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="https://yourblogurl.com">
 
     <title> DevBlog {% block title %}{% endblock%}</title>
 
