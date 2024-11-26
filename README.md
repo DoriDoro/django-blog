@@ -6,8 +6,6 @@ posts. It aims to deepen the understanding of the Django framework by building a
 full-featured blog from scratch, focusing on the major components of the framework and best 
 practices.
 
-This project continues to be developed...
-
 ## Features:
 - **Performance Optimization:**
   - Implement the `Meta` class in models and use ordering and indexing.

@@ -70,10 +70,10 @@ def post_share(request, post_id):
         form = EmailPostForm(request.POST)
         if form.is_valid():
             cleaned_data = form.cleaned_data
-            post_url = request.build_absolute_url(post.get_absolute_url())
+            post_url = request.build_absolute_uri(post.get_absolute_url())
             subject = (
                 f"{cleaned_data['name']} ({cleaned_data['email']})"
-                f"recommends you read {post.title}"
+                f" recommends you to read: {post.title}"
             )
             message = (
                 f"Read {post.title} at {post_url}\n\n"
