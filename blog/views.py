@@ -57,7 +57,7 @@ class PostDetailView(DetailView):
         )
         similar_posts = similar_posts.annotate(same_tags=Count("tags")).order_by(
             "-same_tags", "-publish"
-        )[:4]
+        )[:3]
         return similar_posts
 
 

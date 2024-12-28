@@ -7,7 +7,7 @@
     <div class="col-md-12 page-body">
       <div class="row">
         <div class="sub-title">
-          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h2>Back Home</h2></a>
+          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Back Home</h1></a>
         </div>
 
         <div class="col-md-12 content-page">
@@ -16,12 +16,12 @@
             {% if sent %}
               <h1>E-mail successfully sent</h1>
               <p>
-                The article <span class="share-content">"{{ post.title }}"</span> was successfully
+                The article <span class="share-content"><a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a></span> was successfully
                 sent to <span class="share-content">{{ form.cleaned_data.to }}</span>.
               </p>
             {% else %}
 
-            <h1>Share <span class="share-content">"{{ post.title }}"</span> by e-mail</h1>
+            <h1>Share <span class="share-content"><a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a></span> by e-mail</h1>
             <form method="post">
               {{ form.as_p }}
               {% csrf_token %}

@@ -1,7 +1,5 @@
-<ul class="legend-link">
-  {% for post in latest_posts %}
-  <li>
-    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
+{% for post in latest_posts %}
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
+  </div>
+{% endfor %}

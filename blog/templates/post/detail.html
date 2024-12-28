@@ -6,39 +6,41 @@
 {% block content %}
   <div class="col-md-9">
     <div class="col-md-12 page-body">
+      <!-- Detailed Post - Start -->
       <div class="row">
-        <!-- Detailed Post - Start -->
         <div class="sub-title">
-          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h2>Back</h2></a>
+          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Dori's Python Life in Words</h1></a>
           <a href="{% url 'blog:post_share' post.id %}" class="smoth-scroll" title="Send recommendation via Email"><i class="icon-bubbles"></i></a>
         </div>
 
         <div class="col-md-12 content-page">
           <div class="col-md-12 blog-post">
-            <!-- Post Headline - Start -->
+            <!-- Post - Start -->
             <div class="post-title">
              <h1>{{ post.title }}</h1>
             </div>
-            <!-- Post Headline - End -->
 
-            <!-- Post Detail - Start -->
             <div class="post-info">
-              <span>Published {{ post.publish }} by <a href="#" target="_blank">{{ post.author }}</a></span>
+              <span>Published {{ post.publish }} by <strong><a href="about.html" title="Visit About" target="_blank">{{ post.author }}</a></strong></span>
             </div>
-            <!-- Post Detail - End -->
 
             <p>{{ post.body|markdown }}</p>
+            <!-- Post - End -->
 
-            <!-- Similar Post - Start -->
-            <h2>Similar posts</h2>
-            {% for post in similar_posts %}
-              <p>
-                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-              </p>
-            {% empty %}
-              There are no similar posts yet.
-            {% endfor %}
-            <!-- Similar Post - End -->
+            <!-- Similar Posts - Start -->
+            <div class="you-may-also-like margin-top-40">
+              <h3>Similar posts</h3>
+               <div class="row">
+                 {% for post in similar_posts %}
+                   <div class="col-md-4 col-sm-6 col-xs-12">
+                     <a href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
+                   </div>
+                 {% empty %}
+                   There are no similar posts yet.
+                 {% endfor %}
+              </div>
+            </div>
+            <!-- Similar Posts - End -->
           </div>
         </div>
 
@@ -49,9 +51,9 @@
           {% endwith %}
           {% for comment in comments %}
             <div>
-              <p>
-                Comment {{ forloop.counter }} by <strong>{{ comment.user.username }}</strong> {{ comment.created }}
-              </p>
+              <span>
+                Comment {{ forloop.counter }} by <strong><a href="#" target="_blank">{{ comment.user.username }}</a></strong> {{ comment.created }}
+              </span>
               {{ comment.body|linebreaks }}
             </div>
           {% empty %}
