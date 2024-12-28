@@ -33,6 +33,7 @@ urlpatterns = [
         {"sitemaps": sitemaps},
         name="django.contrib.sitemaps.views.sitemap",
     ),
+    path("tinymce/", include("tinymce.urls")),
 ]
 
 if settings.DEBUG:
