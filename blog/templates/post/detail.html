@@ -25,6 +25,10 @@
             </div>
 
             <p>{{ post.body|markdown }}</p>
+
+            <div class="post-info">
+              <span>Last Updated {{ post.updated }} by <strong><a href="about.html" title="Visit About" target="_blank">{{ post.author }}</a></strong></span>
+            </div>
             <!-- Post - End -->
 
             <!-- Similar Posts - Start -->
