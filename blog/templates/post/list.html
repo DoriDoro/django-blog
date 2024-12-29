@@ -40,7 +40,7 @@
                 {% endif %}
 
               <div class="post-info">
-                <span>Published {{ post.publish }} by <strong><a href="about.html" title="Visit About" target="_blank">{{ post.author }}</a></strong></span>
+                <span>Published {{ post.publish }} by <strong><a href="{% url 'blog:about_me' %}" title="Visit About" target="_blank">{{ post.author }}</a></strong></span>
               </div>
               <div class="post-body">
                 {{ post.body|markdown|truncatewords:50 }}
@@ -50,7 +50,6 @@
           </div>
         </div>
         <!-- List of Blog Post End -->
-
           {% include "pagination.html" with page=page_obj %}
       </div>
     </div>

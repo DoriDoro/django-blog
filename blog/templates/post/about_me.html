@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %} - About {% endblock %}
+
+{% block content %}
+<!-- About Start -->
+  <div class="col-md-9">
+    <div class="col-md-12 page-body">
+      <div class="row">
+        <div class="sub-title">
+          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Dori's Python Life in Words</h1></a>
+          <a href="contact.html" title="Contact Me"><i class="icon-envelope"></i></a>
+        </div>
+
+        <div class="col-md-12 content-page">
+          <div class="col-md-12 blog-post">
+            <h1>Who is <span class="main-color">{{ doridoro_details.first_name }} {{ doridoro_details.last_name }}</span>?</h1>
+
+            <!-- Professions Start -->
+            {% if doridoro_details.professions %}
+              <div class="flex margin-bottom-30">
+                {% for profession in doridoro_details.professions %}
+                  <ul class="knowledge">
+                    <li class="bg-color-{{ forloop.counter }}">{{ profession }}</li>
+                  </ul>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <!-- Professions End -->
+
+            <!-- Introduction Start -->
+            {% if doridoro_details.introduction %}
+              <p>{{ doridoro_details.introduction }}</p>
+            {% endif %}
+            <!-- Introduction End -->
+
+            <!-- Websites Start -->
+            {% if doridoro_details.websites %}
+              <div class="post-title">
+                <h1>My deployed <span class="main-color">Websites</span></h1>
+              </div>
+
+              <div class="you-may-also-like margin-top-40">
+                {% for url, website in doridoro_details.websites %}
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <a href="{{ url }}"><p>{{ website }}</p></a>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <!-- Websites End -->
+
+            <!-- Services Start -->
+            {% if doridoro_details.services %}
+              <div class="post-title">
+                <h1>My <span class="main-color">Services</span></h1>
+              </div>
+
+              <div class="list list-style-2 margin-top-30">
+                {% for service in doridoro_details.services %}
+                  <ul>
+                    <li>{{ service }}</li>
+                  </ul>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <!-- Services End -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- About End -->
+{% endblock %}

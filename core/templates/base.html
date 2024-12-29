@@ -51,24 +51,24 @@
           {% endblock %}
           <!-- Blog Content - End -->
 
-          <!-- Sidebar - Start -->
+          <!-- Left Sidebar - Start -->
           <div class="col-md-3">
             <div class="about-fixed">
               <div class="my-detail">
                 <ul class="menu-link">
                   <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
-                  <li><a href="about.html" title="Visit About">About</a></li>
+                  <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
                   <li><a href="contact.html" title="Contact Me">Contact</a></li>
                 </ul>
 
                 <div class="white-spacing">
-                  <a href="about.html" title="Visit About"><h1>Dorothea Reher</h1></a>
+                  <a href="{% url 'blog:about_me' %}" title="Visit About"><h1>Dorothea Reher</h1></a>
                   <span>Django Developer</span>
                 </div>
 
                 <div class="white-spacing">
                   <h1>Dori's Python Life in Words</h1>
-                  <p>This is my blog, with a selection of articles about Django programming.
+                  <p>In my blog, you find a selection of articles about programming.
                     These articles are written after encountering problems, guidelines on how to
                     do something, and notes for myself. I've added {% total_posts %} posts so far.</p>
                   <h4>
@@ -92,28 +92,28 @@
         </div>
 
         <!-- Legend Start -->
-          <div class="col-md-9 page-body you-may-also-like margin-top-40">
-            <h3>Latest posts</h3>
-            <div class="row">
-              {% show_latest_posts 3 %}
-            </div>
-
-            <h3>Most commented posts</h3>
-            {% get_most_commented_posts 3 as most_commented_posts %}
-              {% for post in most_commented_posts %}
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                  <a href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
-                </div>
-              {% endfor %}
+        <div class="col-md-9 page-body you-may-also-like margin-top-40">
+          <h3>Latest posts</h3>
+          <div class="row">
+            {% show_latest_posts 3 %}
           </div>
-          <!-- Legend End -->
+
+          <h3>Most commented posts</h3>
+          {% get_most_commented_posts 3 as most_commented_posts %}
+            {% for post in most_commented_posts %}
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <a href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
+              </div>
+            {% endfor %}
+        </div>
+        <!-- Legend End -->
 
         <!-- Footer Start -->
         <div class="col-md-9 page-body margin-top-50 footer">
           <footer>
             <ul class="menu-link">
               <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
-              <li><a href="about.html" title="Visit About">About</a></li>
+              <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
               <li><a href="contact.html" title="Contact Me">Contact</a></li>
             </ul>
 

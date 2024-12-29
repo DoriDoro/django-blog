@@ -416,6 +416,9 @@ button {
     cursor: default;
 }
 
+.flex {
+    display: flex;
+}
 
 
 /* My Portfolio */
@@ -878,6 +881,7 @@ blockquote {
     font-size: 18px;
     line-height: 28px;
     padding: 20px;
+    margin-bottom: 50px;
     border-radius: 4px;
     border: 1px dashed #1abc9c;
     font-weight: 400;
@@ -1319,7 +1323,7 @@ blockquote {
     }
 
     .blog-post .post-title h2 {
-        color: #333333;
+       color: #333333;
        font-size: 18px;
        line-height: 28px;
        font-weight: 500;
@@ -1765,23 +1769,23 @@ blockquote {
 }
 
 .bg-color-2 {
-	background-color: #d60bfb;
+    background-color: #f97400;
 }
 
 .bg-color-3 {
-	background-color: #d8be10;
+    background-color: #08a6f3;
 }
 
 .bg-color-4 {
-	background-color: #0fd28a;
+	background-color: #00b76f;;
 }
 
 .bg-color-5 {
-	background-color: #f97400;
+	background-color: #d60bfb;
 }
 
 .bg-color-6 {
-	background-color: #08a6f3;
+	background-color: #d8be10;
 }
 
 
