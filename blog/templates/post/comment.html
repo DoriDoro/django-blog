@@ -3,10 +3,23 @@
 {% block title %}- Add a comment{% endblock %}
 
 {% block content %}
-  {% if comment %}
-    <h2>Your comment has been added.</h2>
-    <p><a href="{{ post.get_absolute_url }}">Back to the post</a></p>
-  {% else %}
-    {% include "post/includes/comment_form.html" %}
-  {% endif %}
+  <!-- Comment Content - Start -->
+  <div class="col-md-12 content-page">
+    <div class="col-md-12 blog-post">
+      {% if comment %}
+        <h2>Your comment has been added.</h2>
+        <p>{{ comment.body }}</p>
+      {% else %}
+        {% include "post/includes/comment_form.html" %}
+      {% endif %}
+    </div>
+  </div>
+  <!-- Comment Content - End -->
+
+  <!-- After Comment - Start -->
+  <div class="after-blog-post">
+    <p>Back to the post <a href="{{ post.get_absolute_url }}" title="Back to Post">{{
+      comment.post.title }}</a></p>
+  </div>
+  <!-- After Comment - End -->
 {% endblock %}

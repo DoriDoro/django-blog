@@ -45,14 +45,9 @@
   <body>
     <div id="main">
       <div class="container">
-        <div class="row">
-          <!-- Blog Content - Start -->
-          {% block content %}
-          {% endblock %}
-          <!-- Blog Content - End -->
-
-          <!-- Left Sidebar - Start -->
-          <div class="col-md-3">
+        <div class="row content-wrapper">
+          <!-- Base Menu Left Sidebar - Start -->
+          <div class="col-md-3 sidebar">
             <div class="about-fixed">
               <div class="my-detail">
                 <ul class="menu-link">
@@ -88,45 +83,85 @@
               </div>
             </div>
           </div>
-          <!-- Left Sidebar - End -->
-        </div>
+          <!-- Base Menu Left Sidebar - End -->
 
-        <!-- Legend Start -->
-        <div class="col-md-9 page-body you-may-also-like margin-top-40">
-          <h3>Latest posts</h3>
-          <div class="row">
-            {% show_latest_posts 3 %}
-          </div>
+          <div class="col-md-9 content-area">
+            <div class="col-md-12 page-body">
+              <div class="row margin-bottom-30">
+                <!-- Base Menu - Start -->
+                <div class="sub-title">
+                  <div class="mobile-show">
+                    <ul class="menu-link">
+                      <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
+                      <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
+                      <li><a href="contact.html" title="Contact Me">Contact</a></li>
+                    </ul>
+                  </div>
+                  <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Dori's Python Life in Words</h1></a>
+                  {% block menu %}
+                  {% endblock %}
+                </div>
+                <!-- Base Menu - End -->
 
-          <h3>Most commented posts</h3>
-          {% get_most_commented_posts 3 as most_commented_posts %}
-            {% for post in most_commented_posts %}
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <a href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
+                <!-- Base Content - Start -->
+                {% block content %}
+                {% endblock %}
+                <!-- Base Content - End -->
               </div>
-            {% endfor %}
-        </div>
-        <!-- Legend End -->
-
-        <!-- Footer Start -->
-        <div class="col-md-9 page-body margin-top-50 footer">
-          <footer>
-            <ul class="menu-link">
-              <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
-              <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
-              <li><a href="contact.html" title="Contact Me">Contact</a></li>
-            </ul>
-
-            <p>© Copyright 2024 Dorothea Reher. All rights reserved</p>
-
-            <!-- UiPasta Credit Start -->
-            <div class="uipasta-credit">Design By <a href="http://www.uipasta.com" target="_blank">UiPasta</a> and modified by Dorothea Reher.
             </div>
-            <!-- UiPasta Credit End -->
-
-          </footer>
+          </div>
         </div>
-        <!-- Footer End -->
+
+        <!-- Base Legend - Start -->
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-12">
+              <div class="row margin-top-40">
+                <div class="page-body you-may-also-like">
+                  <h3>Latest posts</h3>
+                  <div class="row">
+                    {% show_latest_posts 3 %}
+                  </div>
+
+                  <h3>Most commented posts</h3>
+                  <div class="row">
+                  {% get_most_commented_posts 3 as most_commented_posts %}
+                    {% for post in most_commented_posts %}
+                      <div class="col-md-4 col-xs-12">
+                        <a href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Base Legend - End -->
+
+        <!-- Base Footer - Start -->
+        <div class="row">
+          <div class="col-md-9 margin-top-40">
+            <div class="col-md-12 page-body footer">
+              <footer>
+                <ul class="menu-link">
+                  <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
+                  <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
+                  <li><a href="contact.html" title="Contact Me">Contact</a></li>
+                </ul>
+
+                <p>© Copyright 2024 Dorothea Reher. All rights reserved</p>
+
+                <!-- UiPasta Credit Start -->
+                <div class="uipasta-credit">Design By <a href="http://www.uipasta.com" target="_blank">UiPasta</a> and modified by Dorothea Reher.
+                </div>
+                <!-- UiPasta Credit End -->
+
+              </footer>
+            </div>
+          </div>
+        </div>
+        <!-- Base Footer - End -->
       </div>
     </div>
 

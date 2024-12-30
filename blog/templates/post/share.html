@@ -2,36 +2,35 @@
 
 {% block title %} - Share a Django Blog post {% endblock %}
 
+<!-- Share Content - Start -->
 {% block content %}
-  <div class="col-md-9">
-    <div class="col-md-12 page-body">
-      <div class="row">
-        <div class="sub-title">
-          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Back Home</h1></a>
-        </div>
-
-        <div class="col-md-12 content-page">
-          <div class="col-md-12 blog-post">
-          <!-- Shared Post - Start -->
-            {% if sent %}
-              <h1>E-mail successfully sent</h1>
-              <p>
-                The article <span class="share-content"><a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a></span> was successfully
-                sent to <span class="share-content">{{ form.cleaned_data.to }}</span>.
-              </p>
-            {% else %}
-
-            <h1>Share <span class="share-content"><a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a></span> by e-mail</h1>
-            <form method="post">
-              {{ form.as_p }}
-              {% csrf_token %}
-              <input class="btn btn-secondary" type="submit" value="Send e-mail">
-            </form>
-            {% endif %}
-          <!-- Shared Post - End -->
-          </div>
-        </div>
-      </div>
+  <div class="col-md-12 content-page">
+    <div class="col-md-12 blog-post">
+      <!-- Shared Post - Start -->
+      {% if sent %}
+        <h1>E-mail successfully sent</h1>
+        <p>
+          The article
+          <span class="share-content">
+            <a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a>
+          </span>
+          was successfully sent to
+          <span class="share-content">{{ form.cleaned_data.to }}</span>.
+        </p>
+      {% else %}
+        <h1>Share
+          <span class="share-content">
+            <a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a>
+          </span> by e-mail
+        </h1>
+        <form method="post">
+          {{ form.as_p }}
+          {% csrf_token %}
+          <input class="btn btn-secondary" type="submit" value="Send e-mail">
+        </form>
+      {% endif %}
+      <!-- Shared Post - End -->
     </div>
   </div>
 {% endblock %}
+<!-- Share Content - End -->

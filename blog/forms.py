@@ -35,9 +35,8 @@ class EmailPostForm(forms.Form):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ["user", "body"]
+        fields = ["body"]
         widgets = {
-            "user": forms.Select(attrs={"class": "form-control"}),
             "body": forms.Textarea(
                 attrs={
                     "class": "form-control",
@@ -47,16 +46,12 @@ class CommentForm(forms.ModelForm):
             ),
         }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields["user"].queryset = UserModel.objects.filter(is_active=True)
-
 
 class SearchForm(forms.Form):
     query = forms.CharField(
         max_length=250,
         widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Enter your search"}
+            attrs={"class": "form-control", "placeholder": "Enter a word or two..."}
         ),
         label="",
     )

@@ -102,9 +102,11 @@ class PostCommentView(FormView):
     form_class = CommentForm
 
     def form_valid(self, form):
+        print("valid")
         post_id = self.kwargs["post_id"]
         post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
         comment = form.save(commit=False)
+        comment.user = self.request.user
         comment.post = post
         comment.save()
         return render(
@@ -118,6 +120,7 @@ class PostCommentView(FormView):
         )
 
     def form_invalid(self, form):
+        print("invalid")
         post_id = self.kwargs["post_id"]
         post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
         return render(

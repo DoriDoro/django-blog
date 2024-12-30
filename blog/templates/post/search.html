@@ -3,47 +3,39 @@
 
 {% block title %} - Search {% endblock %}
 
+<!-- Search Results Content - Start -->
 {% block content %}
-  <div class="col-md-9">
-    <div class="col-md-12 page-body">
-      <div class="row">
-        <div class="sub-title">
-          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Dori's Python Life in Words</h1></a>
+  <div class="col-md-12 content-page">
+    <div class="col-md-12 blog-post">
+      {% if query %}
+        <div>
+          <p>Posts containing "{{ query }}"</p>
         </div>
-
-        <!-- Search Results - Start -->
-        <div class="col-md-12 content-page">
-          <div class="col-md-12 blog-post">
-            {% if query %}
-              <div>
-                <p>Posts containing "{{ query }}"</p>
-              </div>
-                {% for post in results %}
-                  <div class="post-title">
-                    <a href="{{ post.get_aboslute_url }}">
-                      <h2>{{ post.title }}</h2>
-                    </a>
-                  </div>
-                  {{ post.body|markdown|truncatewords_html:12 }}
-                  {% if not forloop.last %} <hr> {% endif %}
-                {% empty %}
-                  <p>There are no results for your search.</p>
-                {% endfor %}
-              <hr>
-              <p><a href="{% url 'blog:post_search' %}">Search again</a></p>
-            {% else %}
-              <div class="post-title">
-                <h1>Search for posts:</h1>
-                <form method="get">
-                  {{ form.as_p }}
-                  <input class="btn btn-secondary" type="submit" value="Search">
-                </form>
-              </div>
-            {% endif %}
-          </div>
+        {% for post in results %}
+        <div class="post-title">
+          <a href="{{ post.get_aboslute_url }}">
+            <h2>{{ post.title }}</h2>
+          </a>
         </div>
-        <!-- Search Results - End -->
-      </div>
+        {{ post.body|markdown|truncatewords_html:12 }}
+          {% if not forloop.last %}
+          <hr>
+          {% endif %}
+        {% empty %}
+          <p>There are no results for your search.</p>
+        {% endfor %}
+        <hr>
+        <p><a href="{% url 'blog:post_search' %}">Search again</a></p>
+      {% else %}
+        <div class="post-title">
+          <h2>Search for posts:</h2>
+          <form method="get">
+            {{ form.as_p }}
+            <input class="btn btn-secondary" type="submit" value="Search">
+          </form>
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endblock %}
+<!-- Search Results Content - End -->

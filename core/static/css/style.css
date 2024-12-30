@@ -17,7 +17,7 @@
    1. Global Style
    2. Preloader
    3. Menu and Pagination
-   4. About Me (Left Sidebar)
+   4. Fixed Left Sidebar
    5. About Me Page
    6. My Portfolio
    7. Owl Carousel Navigation
@@ -116,6 +116,7 @@ button {
 .page-body {
     background: #ffffff;
     box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+    padding: 20px 30px;
 }
 
 .sub-title {
@@ -141,6 +142,11 @@ button {
     padding-bottom: 30px;
     border-top: 1px dashed #dedede;
     border-bottom: 1px dashed #dedede;
+}
+
+.mobile-show {
+    display: none;
+    visibility: hidden;
 }
 
 .grabbing {
@@ -327,7 +333,21 @@ button {
 
 
 
-/* About Me (Left Sidebar) */	
+/* Fixed Left Sidebar */
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Place the sidebar on the right */
+}
+
+.content-area {
+    flex: 1; /* Allow the content area to take up the remaining space */
+}
+
+.sidebar {
+    flex: 0 0 25%; /* Fix the sidebar width (e.g., 25%) */
+    max-width: 25%; /* Ensure it matches the Bootstrap grid */
+}
 
 .about-fixed {
     position: fixed;
@@ -371,6 +391,10 @@ button {
     line-height: 30px;
     line-height: 30px;
     font-size: 16px;
+}
+
+.my-detail p {
+    margin: 0 10px;
 }
 
 .legend-link {
@@ -886,7 +910,7 @@ blockquote {
     border: 1px dashed #1abc9c;
     font-weight: 400;
 }
-	
+
 
 
 
@@ -1242,7 +1266,22 @@ blockquote {
 
 
 @media only screen and (max-width: 991px) {
-	
+
+	    .content-wrapper {
+        flex-direction: column; /* Stack elements in a column */
+    }
+
+    .content-area,
+    .sidebar {
+        max-width: 100%; /* Both take full width */
+        flex: none; /* Remove any flex properties */
+    }
+
+    /* Adjust the sidebar styling */
+    .sidebar {
+        margin-top: 20px; /* Add spacing between content and sidebar */
+    }
+
     .about-fixed {
        position: inherit;
        width: auto;
@@ -1250,6 +1289,11 @@ blockquote {
 	
     .post-quote {
        width: 90%;
+    }
+
+    .mobile-show {
+        display: block;
+        visibility: visible;
     }
 }
 
@@ -1271,6 +1315,7 @@ blockquote {
 }
 
 
+/*  mobil */
 @media only screen and (max-width: 570px) {
 	
     .subscribe-form .text-input {
@@ -1281,13 +1326,17 @@ blockquote {
        font-size: 13px;
        width: 90px;
     }
+
+    .flex {
+        display: block;
+    }
 }
 
 
 @media only screen and (max-width:479px) {
 	
     #main {
-       margin: 15px 0;
+       margin: 15px 15px;
      }
 	
     .sub-title {
@@ -1396,6 +1445,12 @@ blockquote {
        font-size: 18px;
        line-height: 28px;
     }
+
+    .you-may-also-like p {
+        font-size: 11px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
 	
     .comment h3 {
        font-size: 18px;
@@ -1470,6 +1525,7 @@ blockquote {
 .margin-0 {
 	margin: 0px !important;
 }
+
 
 /* Margin Top */
 
@@ -1614,6 +1670,11 @@ blockquote {
 	padding: 0px !important;
 }
 
+.padding-50-30 {
+    padding: 50px 30px !important;
+}
+
+
 
 /* Padding Top */
 
@@ -1730,6 +1791,24 @@ blockquote {
 
 .padding-bottom-200 {
 	padding-bottom: 200px !important;
+}
+
+/* Padding Left */
+
+.padding-left-5 {
+	padding-left: 5px !important;
+}
+
+.padding-left-10 {
+	padding-left: 10px !important;
+}
+
+.padding-left-20 {
+	padding-left: 20px !important;
+}
+
+.padding-left-30 {
+	padding-left: 30px !important;
 }
 
 
