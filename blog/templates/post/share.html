@@ -23,10 +23,10 @@
             <a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a>
           </span> by e-mail
         </h1>
-        <form method="post">
+        <form method="post" class="margin-top-50">
           {{ form.as_p }}
           {% csrf_token %}
-          <input class="btn btn-secondary" type="submit" value="Send e-mail">
+          <input class="btn bg-main-color font-main-color" type="submit" value="Send e-mail">
         </form>
       {% endif %}
       <!-- Shared Post - End -->

@@ -113,6 +113,14 @@ button {
     color: #1abc9c;
 }
 
+.bg-main-color {
+    background-color: #1abc9c;
+}
+
+.font-main-color {
+    color: #555;
+}
+
 .page-body {
     background: #ffffff;
     box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
@@ -1268,7 +1276,7 @@ blockquote {
 @media only screen and (max-width: 991px) {
 
 	    .content-wrapper {
-        flex-direction: column; /* Stack elements in a column */
+            flex-direction: column-reverse; /* Stack elements in a column */
     }
 
     .content-area,
