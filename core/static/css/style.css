@@ -52,7 +52,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #fafafa !important;
+    background: #e4e4e4 !important;
 }
 	
 html {
@@ -61,21 +61,21 @@ html {
 }
 
 ::selection {
-    background-color: #1abc9c;
+    background-color: #26907b;
     color: #ffffff;
 }
 
 ::-moz-selection {
-    background-color: #1abc9c;
+    background-color: #26907b;
     color: #ffffff;
 }
 
 a {
     text-decoration: none !important;
-    color: #1abc9c;
+    color: #26907b;
 }
 
-a:hover,
+a:hover,#26907b
 a:focus,
 a:active {
     text-decoration: none;
@@ -110,20 +110,20 @@ button {
 }
 
 .main-color {
-    color: #1abc9c;
+    color: #26907b;
 }
 
 .bg-main-color {
-    background-color: #1abc9c;
+    background-color: #26907b;
 }
 
 .font-main-color {
-    color: #555;
+    color: #fff;
 }
 
 .page-body {
     background: #ffffff;
-    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.37);
     padding: 20px 30px;
 }
 
@@ -148,8 +148,8 @@ button {
 .content-page {
     padding-top: 30px;
     padding-bottom: 30px;
-    border-top: 1px dashed #dedede;
-    border-bottom: 1px dashed #dedede;
+    border-top: 1px dashed #454a4a;
+    border-bottom: 1px dashed #454a4a;
 }
 
 .mobile-show {
@@ -205,7 +205,7 @@ button {
 }
 
 .button-style {
-    color: #1abc9c;
+    color: #26907b;
     overflow: hidden;
 }
 
@@ -213,14 +213,14 @@ button {
     position: absolute;
     font-size: 27px;
     line-height: 38px;
-    color: #1abc9c;
+    color: #26907b;
    -webkit-transition: all 0.3s;
    -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .button-style:active:before {
-    color: #1abc9c;
+    color: #26907b;
 }
 
 .button-anim:before {
@@ -257,7 +257,7 @@ button {
     margin: -26px 0 0 -26px;
     font-size: 10px;
     border-right: 5px solid #333333;
-    border-left: 5px solid #1abc9c;
+    border-left: 5px solid #26907b;
     border-radius: 50%;
     -webkit-animation: spinner 700ms infinite linear;
     animation: spinner 700ms infinite linear;
@@ -296,7 +296,7 @@ button {
     top: 0px;
     font-size: 20px;
     color: #fff;
-    background: #1abc9c;
+    background: #26907b;
     padding: 12px;
 }
 
@@ -332,7 +332,7 @@ button {
 }
 
 .menu-link li a:hover {
-    color: #1abc9c;
+    color: #26907b;
 }
 
 .pagination {
@@ -364,7 +364,7 @@ button {
 
 .my-pic {
     width: 100%;
-    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.37);
 }
 
 .my-pic img {
@@ -375,12 +375,12 @@ button {
     text-align: center;
     margin-bottom: 30px;
     background: #ffffff;
-    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.37);
 }
 
 .my-detail .white-spacing {
     padding: 23px 0;
-    border-bottom: 1px dashed #cccccc;
+    border-bottom: 1px dashed #454a4a;
 }
 
 .my-detail h1 {
@@ -394,7 +394,7 @@ button {
 }
 
 .my-detail span {
-    color: #797979;
+    color: #454a4a;
     font-weight: 400;
     line-height: 30px;
     line-height: 30px;
@@ -568,14 +568,13 @@ tr > td:nth-child(2) {
 }
 
 .form-control {
-	border: 2px solid transparent;
 	height: 50px;
 	border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
-	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-	   -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-	    -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-		 -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+	-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
+	   -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
+	    -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
+		 -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
+			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
 	-webkit-transition:all 150ms ease-in-out 0s;
 	   -moz-transition:all 150ms ease-in-out 0s;
 	    -ms-transition:all 150ms ease-in-out 0s;
@@ -592,7 +591,7 @@ tr > td:nth-child(2) {
 }
 
 .form-control:focus {
-    border-color: #1abc9c;
+    border-color: #26907b;
     border-width: 2px;
 }
 
@@ -625,7 +624,7 @@ tr > td:nth-child(2) {
 }
 
 .testimonial-client img {
-    border: 1px dashed #333333;
+    border: 1px dashed #454a4a;
     border-radius: 50%;
     width: 90px;
 }
@@ -674,7 +673,7 @@ tr > td:nth-child(2) {
 }
 
 .post-comment h2 {
-    color: #1abc9c;
+    color: #26907b;
 }
 
 .comment-body {
@@ -723,7 +722,7 @@ tr > td:nth-child(2) {
     content: '\e071';
     font-family: 'simple-line-icons';
     display: block;
-    color: #1abc9c;
+    color: #26907b;
     font-size: 65px;
     font-weight: 600;
     z-index: 1;
@@ -768,7 +767,7 @@ tr > td:nth-child(2) {
 /* Blockquote */
 
 .post-quote {
-    background: #1abc9c;
+    background: #26907b;
     color: #f6f8f8;
     width: 70%;
     border-radius: 50px;
@@ -801,7 +800,7 @@ tr > td:nth-child(2) {
 
 blockquote {
     font-style: italic;
-    border-left: 5px solid #1abc9c;
+    border-left: 5px solid #26907b;
 }
 
 
@@ -847,8 +846,8 @@ blockquote {
     background: #ffffff;
     width: 263px;
     padding: 25px;
-    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
-   -webkit-box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.37);
+   -webkit-box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.37);
     
 }
 
@@ -862,7 +861,7 @@ blockquote {
 }
 
 .endpage-box a:hover {
-    color: #1abc9c;
+    color: #26907b;
 }
 
 #endpage-box {
@@ -910,7 +909,7 @@ blockquote {
     font-size: 25px;
     line-height: 35px;
     font-weight: 600;
-    color: #1abc9c;
+    color: #26907b;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
 }
@@ -921,7 +920,7 @@ blockquote {
     padding: 20px;
     margin-bottom: 50px;
     border-radius: 4px;
-    border: 1px dashed #1abc9c;
+    border: 1px dashed #26907b;
     font-weight: 400;
 }
 
@@ -937,7 +936,7 @@ blockquote {
     font-size: 25px;
     line-height: 35px;
     font-weight: 600;
-    color: #1abc9c;
+    color: #26907b;
     margin-bottom: 35px;
     letter-spacing: 0.5px;
 }
@@ -950,7 +949,7 @@ blockquote {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    border: 2px dashed #1abc9c;
+    border: 2px dashed #26907b;
     line-height: 90px;
     display: block;
     font-size: 16px;
@@ -961,7 +960,7 @@ blockquote {
 }
 
 .load-more-button:hover {
-    background-color: #1abc9c;
+    background-color: #26907b;
     color: #ffffff;
     box-shadow: 0px 7px 9px #696969;
 }
@@ -970,7 +969,7 @@ blockquote {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    border: 2px dashed #1abc9c;
+    border: 2px dashed #26907b;
     line-height: 90px;
     display: block;
     font-size: 16px;
@@ -1000,7 +999,7 @@ blockquote {
 .subscribe-form .text-input {
 	padding: 20px;
 	border-radius: 50px;
-	border: solid 7px #1abc9c;
+	border: solid 7px #26907b;
 	background: #333333;
 	color: #ffffff;
 	width: 100%;
@@ -1049,7 +1048,7 @@ blockquote {
 	font-size: 16px;
 	letter-spacing: 0.7px;
 	color: #FFF;
-	background: #1abc9c;
+	background: #26907b;
 	border: none;
 	top: 5px;
 	right: 5px;
@@ -1213,7 +1212,7 @@ blockquote {
 .scroll-to-top {
     display: none;
     font-size: 40px;
-    color: #1abc9c;
+    color: #26907b;
     position: fixed;
     right: 20px;
     bottom: 50px;
@@ -1281,8 +1280,8 @@ blockquote {
 
 @media only screen and (max-width: 991px) {
 
-	    .content-wrapper {
-            flex-direction: column-reverse; /* Stack elements in a column */
+    .content-wrapper {
+        flex-direction: column-reverse; /* Stack elements in a column */
     }
 
     .content-area,
@@ -1293,7 +1292,7 @@ blockquote {
 
     /* Adjust the sidebar styling */
     .sidebar {
-        margin-top: 20px; /* Add spacing between content and sidebar */
+        margin-top: 40px; /* Add spacing between content and sidebar */
     }
 
     .about-fixed {
@@ -1354,7 +1353,7 @@ blockquote {
      }
 	
     .sub-title {
-       border-bottom: 1px dashed #cccccc;
+       border-bottom: 1px dashed #454a4a;
        padding: 30px;
        display: inline-block;
        text-align: left;
@@ -1927,7 +1926,7 @@ blockquote {
 }
 
 .uipasta-credit a {
-    color: #1abc9c;
+    color: #26907b;
     font-weight: 600;
 }
 

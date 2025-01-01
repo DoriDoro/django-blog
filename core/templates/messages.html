@@ -1,0 +1,12 @@
+<div class="margin-top-40" style="width: 95%; padding-top: 40px;">
+  <ul class="messages">
+    {% for message in messages %}
+      <div class="container-fluid padding-0">
+        <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          {{ message }}
+        </div>
+      </div>
+    {% endfor %}
+  </ul>
+</div>

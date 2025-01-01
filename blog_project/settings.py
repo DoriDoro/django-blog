@@ -15,6 +15,11 @@ from pathlib import Path
 
 from decouple import config
 
+
+# Name of the project:
+PROJECT_NAME = "Django Blog - Dori's Python Life in Words"
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", "True").lower() == "false"
+DEBUG = config("DEBUG", "True")
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
 
@@ -47,6 +52,7 @@ INSTALLED_APPS = [
     "account",
     "blog",
     "core",
+    "contact",
     # packages/libraries:
     "taggit",
 ]
@@ -161,6 +167,7 @@ EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
+CONTACT_EMAIL = config("CONTACT_EMAIL")
 
 
 # Sitemap framework

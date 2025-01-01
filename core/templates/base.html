@@ -53,7 +53,7 @@
                 <ul class="menu-link">
                   <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
                   <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
-                  <li><a href="contact.html" title="Contact Me">Contact</a></li>
+                  <li><a href="{% url 'contact:contact_me' %}" title="Contact Me">Contact</a></li>
                 </ul>
 
                 <div class="white-spacing">
@@ -88,13 +88,19 @@
           <div class="col-md-9 content-area">
             <div class="col-md-12 page-body">
               <div class="row margin-bottom-30">
+                {% if messages %}
+                <!-- Alerts/Messages - Start -->
+                  {% include 'messages.html' %}
+                <!-- Alerts/Messages - End -->
+                {% endif %}
+
                 <!-- Base Menu - Start -->
                 <div class="sub-title">
                   <div class="mobile-show">
                     <ul class="menu-link">
                       <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
                       <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
-                      <li><a href="contact.html" title="Contact Me">Contact</a></li>
+                      <li><a href="{% url 'contact:contact_me' %}" title="Contact Me">Contact</a></li>
                     </ul>
                   </div>
                   <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Dori's Python Life in Words</h1></a>
@@ -114,9 +120,9 @@
 
         <!-- Base Legend - Start -->
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-9 margin-top-40">
             <div class="col-md-12">
-              <div class="row margin-top-40">
+              <div class="row">
                 <div class="page-body you-may-also-like">
                   <h3>Latest posts</h3>
                   <div class="row">
@@ -147,7 +153,7 @@
                 <ul class="menu-link">
                   <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
                   <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
-                  <li><a href="contact.html" title="Contact Me">Contact</a></li>
+                  <li><a href="{% url 'contact:contact_me' %}" title="Contact Me">Contact</a></li>
                 </ul>
 
                 <p>© Copyright 2024 Dorothea Reher. All rights reserved</p>
