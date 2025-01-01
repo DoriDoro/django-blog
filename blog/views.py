@@ -93,12 +93,12 @@ def post_share(request, post_id):
         form = EmailPostForm()
 
     return render(
-        request, "post/share.html", {"post": post, "form": form, "sent": sent}
+        request, "share/share.html", {"post": post, "form": form, "sent": sent}
     )
 
 
 class PostCommentView(FormView):
-    template_name = "post/comment.html"
+    template_name = "comment/comment.html"
     form_class = CommentForm
 
     def form_valid(self, form):
@@ -154,12 +154,14 @@ def post_search(request):
             )
 
     return render(
-        request, "post/search.html", {"form": form, "query": query, "results": results}
+        request,
+        "search/search.html",
+        {"form": form, "query": query, "results": results},
     )
 
 
 class AboutMeView(TemplateView):
-    template_name = "post/about_me.html"
+    template_name = "about/about_me.html"
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
