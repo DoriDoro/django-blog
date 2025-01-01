@@ -17,9 +17,13 @@
   <!-- Comment Content - End -->
 
   <!-- After Comment - Start -->
-  <div class="after-blog-post">
-    <p>Back to the post <a href="{{ post.get_absolute_url }}" title="Back to Post">{{
-      comment.post.title }}</a></p>
+  <div class="col-md-12">
+    <div class="col-md-12">
+      <div class="margin-top-20">
+        <p>Back to the post <a href="{{ post.get_absolute_url }}"
+             title="Back to Post">{{ comment.post.title }}</a></p>
+      </div>
+    </div>
   </div>
   <!-- After Comment - End -->
 {% endblock %}

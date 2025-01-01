@@ -1,7 +1,7 @@
 <div class="row post-comment">
   <div class="col-md-11">
     <!-- Add a Comment - Start -->
-    <div class="row margin-bottom-70">
+    <div class="row">
       <h2>Add a new comment</h2>
       <form action="{% url 'blog:post_comment' post.id %}" method="post">
         {% csrf_token %}
