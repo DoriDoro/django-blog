@@ -677,6 +677,12 @@ tr > td:nth-child(2) {
     color: #1abc9c;
 }
 
+.comment-body {
+    font-style: italic;
+    color: gray;
+    margin-left: 10px;
+}
+
 .post-info {
     font-size: 14px;
     line-height: 30px;
