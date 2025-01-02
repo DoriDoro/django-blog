@@ -11,15 +11,15 @@
 
 <!-- About Content - Start -->
 {% block content %}
-  <div class="col-md-12 content-page">
-    <div class="col-md-12 blog-post">
+  <div class="mx-4 content-page">
+    <div class="blog-post">
       <h1>
         Who is <span class="main-color">{{ doridoro_details.first_name }} {{ doridoro_details.last_name }}</span>?
       </h1>
 
       <!-- Professions Content - Start -->
       {% if doridoro_details.professions %}
-        <div class="flex margin-bottom-30">
+        <div class="flex mb-4">
           {% for profession in doridoro_details.professions %}
           <ul class="knowledge">
             <li class="bg-color-{{ forloop.counter }}">{{ profession }}</li>
@@ -54,10 +54,10 @@
   </div>
 
   <!-- Websites Content - Start -->
-  <div class="col-md-12">
+  <div class="mx-4">
     <div class="col-md-12">
       {% if doridoro_details.websites %}
-        <div class="you-may-also-like margin-top-40">
+        <div class="you-may-also-like mt-4">
           <h3>My deployed Websites</h3>
           <div class="row">
             {% for url, website in doridoro_details.websites %}

@@ -12,11 +12,11 @@
 <!-- Posts/Articles Content - Start -->
 {% block content %}
   {% if tag %}
-    <div class="margin-left-30">
+    <div class="mx-4">
       <p>Posts tagged with "{{ tag.name }}"</p>
     </div>
   {% else %}
-    <div class="margin-left-30">
+    <div class="mx-4">
       <p>
         In my blog, you'll find a selection of articles focused on <strong>Python
         programming</strong>, <strong>software development</strong>, and
@@ -37,8 +37,8 @@
   {% endif %}
 
   <!-- List of Posts - Start -->
-  <div class="col-md-12 content-page">
-    <div class="col-md-12 blog-post">
+  <div class="mx-4 content-page">
+    <div class="blog-post">
       {% for post in posts %}
         <div class="post-title">
           <a href="{{ post.get_absolute_url }}">
@@ -74,7 +74,9 @@
   <!-- List of Posts - End -->
 
   <!-- Pagination - Start -->
-  {% include "pagination.html" with page=page_obj %}
+  <div class="m-4">
+    {% include "pagination.html" with page=page_obj %}
+  </div>
   <!-- Pagination  End -->
 {% endblock %}
 <!-- Posts/Articles Content - Start -->

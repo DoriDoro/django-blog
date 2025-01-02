@@ -12,7 +12,7 @@
 
 <!-- Post/Article and Comment Content - Start -->
 {% block content %}
-  <div class="col-md-12 content-page">
+  <div class="mx-4 content-page">
     <div class="col-md-12 blog-post">
       <!-- Post/Article Content - Start -->
       <div class="post-title">
@@ -39,7 +39,7 @@
       <!-- Post/Article Content - End -->
 
       <!-- Similar Posts Content - Start -->
-      <div class="you-may-also-like margin-top-40">
+      <div class="mt-4 you-may-also-like">
         <h3>Similar posts</h3>
         <div class="row">
           {% for post in similar_posts %}
@@ -56,7 +56,7 @@
   </div>
 
   <!-- Comments Content - Start -->
-  <div class="col-md-12 post-comment">
+  <div class="m-4 post-comment">
     {% with comments.count as total_comments %}
       <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
     {% endwith %}

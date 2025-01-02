@@ -78,13 +78,13 @@
 		  
        /* Tooltip */
 	   
-        $('[data-toggle="tooltip"]').tooltip();
+        /* $('[data-toggle="tooltip"]').tooltip(); */
 
 
 
        /* Popover */
 	   
-        $('[data-toggle="popover"]').popover();		  
+//        $('[data-toggle="popover"]').popover();
 		  
 		  
 	   

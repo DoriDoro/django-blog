@@ -5,8 +5,8 @@
 
 <!-- Search Results Content - Start -->
 {% block content %}
-  <div class="col-md-12 content-page">
-    <div class="col-md-12 blog-post">
+  <div class="mx-4 mb-4 content-page">
+    <div class="blog-post">
       {% if query %}
         <div>
           <p>Posts containing "{{ query }}"</p>
@@ -31,7 +31,7 @@
           <h2>Search for posts:</h2>
           <form method="get">
             {{ form.as_p }}
-            <input class="btn bg-main-color font-main-color" type="submit" value="Search">
+            <input class="btn btn-primary" type="submit" value="Search">
           </form>
         </div>
       {% endif %}

@@ -1,15 +1,15 @@
-<div class="row post-comment">
+<div class="row post-comment m-3">
   <div class="col-md-11">
     <!-- Add a Comment - Start -->
     <div class="row">
-      <h2>Add a new comment</h2>
+      <h3>Add a new comment</h3>
       <form action="{% url 'blog:post_comment' post.id %}" method="post">
         {% csrf_token %}
         <div class="form-group">
           {{ form.body }}
         </div>
         <p>
-          <input class="btn bg-main-color font-main-color" type="submit" value="Add comment">
+          <input class="btn btn-primary" type="submit" value="Add comment">
         </p>
       </form>
     </div>

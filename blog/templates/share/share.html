@@ -4,8 +4,8 @@
 
 <!-- Share Content - Start -->
 {% block content %}
-  <div class="col-md-12 content-page">
-    <div class="col-md-12 blog-post">
+  <div class="mx-4 mb-4 content-page">
+    <div class="blog-post">
       <!-- Shared Post - Start -->
       {% if sent %}
         <h1>E-mail successfully sent</h1>
@@ -23,10 +23,10 @@
             <a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a>
           </span> by e-mail
         </h1>
-        <form method="post" class="margin-top-50">
+        <form method="post" class="mt-4">
           {{ form.as_p }}
           {% csrf_token %}
-          <input class="btn bg-main-color font-main-color" type="submit" value="Send e-mail">
+          <input class="btn btn-primary" type="submit" value="Send e-mail">
         </form>
       {% endif %}
       <!-- Shared Post - End -->
