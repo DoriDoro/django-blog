@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %} - Registration{% endblock %}
+
+{% block content %}
+  <div class="mx-4 mb-4 content-page">
+    <div class="col-md-12 blog-post">
+      <h1><span class="main-color">Register</span> an account</h1>
+
+      <!-- Display form errors -->
+      {% if form.errors %}
+      <div class="alert alert-danger">
+        <strong>There were some problems with your submission:</strong>
+        <ul>
+          {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+            <li>{{ field|capfirst }}: {{ error }}</li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      <!-- Registration Form - Start-->
+      <form method="post" class="my-4">
+        {% csrf_token %}
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.username }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.email }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.first_name }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.last_name }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.password1 }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.password2 }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              {{ form.introduction }}
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-secondary" onclick="window.location.href='{% url 'blog:post_list' %}'">Cancel</button>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+      <!-- Registration Form - End -->
+    </div>
+  </div>
+{% endblock %}
+<!-- Registration Form Content - End -->
