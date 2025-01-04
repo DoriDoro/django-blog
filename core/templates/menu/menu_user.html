@@ -1,6 +1,7 @@
 <ul class="menu-link">
+  <li><a href="{% url 'account:dashboard' %}" title="Go back to Dashboard">Dashboard</a></li>
   <li><a href="{% url 'account:edit_profile' %}" title="Update your details">Edit</a></li>
-  <li><a href="{% url 'blog:about_me' %}" title="Manage your password">Password</a></li>
+  <li><a href="{% url 'account:password_change' %}" title="Change your password">Password</a></li>
   <li>
     <form method="post" action="{% url 'account:logout' %}" class="logout-form">
         {% csrf_token %}

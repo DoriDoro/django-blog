@@ -4,7 +4,11 @@ from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, DetailView
 
-from account.forms import RegistrationForm, CustomAuthenticationForm, UserEditForm
+from account.forms import (
+    RegistrationForm,
+    CustomAuthenticationForm,
+    UserEditForm,
+)
 
 UserModel = get_user_model()
 

@@ -14,4 +14,14 @@ urlpatterns = [
     ),
     path("profile/", views.DashboardProfileView.as_view(), name="dashboard"),
     path("edit-profile/", views.UserEditView.as_view(), name="edit_profile"),
+    path(
+        "password-change/",
+        auth_views.PasswordChangeView.as_view(success_url="done"),
+        name="password_change",
+    ),
+    path(
+        "password-change/done/",
+        auth_views.PasswordChangeDoneView.as_view(),
+        name="password_change_done",
+    ),
 ]
