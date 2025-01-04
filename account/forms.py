@@ -77,6 +77,52 @@ class RegistrationForm(UserCreationForm):
         ]
 
 
+class UserEditForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["username"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Update your username",
+                "aria-label": "Update your username",
+            }
+        )
+        self.fields["email"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Update your Email Address",
+                "aria-label": "Update your Email Address",
+            }
+        )
+        self.fields["first_name"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Update your first name",
+                "aria-label": "Update your first name",
+            }
+        )
+        self.fields["last_name"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Update your last name",
+                "aria-label": "Update your last name",
+            }
+        )
+        self.fields["introduction"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "rows": 6,
+                "placeholder": "Update to introduce yourself in a few words...",
+                "aria-label": "Update to introduce yourself in a few words...",
+            }
+        )
+
+    class Meta:
+        model = UserModel
+        fields = ["username", "email", "first_name", "last_name", "introduction"]
+
+
 class CustomAuthenticationForm(AuthenticationForm):
     username = forms.CharField(
         widget=forms.TextInput(

@@ -13,4 +13,5 @@ urlpatterns = [
         name="logout",
     ),
     path("profile/", views.DashboardProfileView.as_view(), name="dashboard"),
+    path("edit-profile/", views.UserEditView.as_view(), name="edit_profile"),
 ]

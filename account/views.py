@@ -2,9 +2,9 @@ from django.contrib.auth import get_user_model, login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, UpdateView, DetailView
 
-from account.forms import RegistrationForm, CustomAuthenticationForm
+from account.forms import RegistrationForm, CustomAuthenticationForm, UserEditForm
 
 UserModel = get_user_model()
 
@@ -28,6 +28,16 @@ class CustomLoginView(LoginView):
 class DashboardProfileView(LoginRequiredMixin, DetailView):
     model = UserModel
     template_name = "profile/dashboard.html"
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
+
+class UserEditView(LoginRequiredMixin, UpdateView):
+    model = UserModel
+    form_class = UserEditForm
+    template_name = "profile/user_edit.html"
+    success_url = reverse_lazy("account:dashboard")
 
     def get_object(self, queryset=None):
         return self.request.user

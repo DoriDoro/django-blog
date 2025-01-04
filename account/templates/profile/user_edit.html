@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %} - Update your details{% endblock %}
+
+<!-- Post/Article Detail Menu - Start -->
+{% block menu %}
+<a href="{% url 'blog:post_list' %}" title="Got to Home Page"><i class="icon-home"></i></a>
+{% endblock %}
+<!-- Post/Article Detail Menu - End -->
+
+<!-- Dashboard/Profile Content - Start -->
+{% block content %}
+  <div class="mx-4 mb-4 content-page">
+    <div class="blog-post">
+      <div>
+        {% include 'menu/menu_user.html' %}
+      </div>
+
+      <div class="card my-4">
+        <div class="card-header">
+          <h1>Update your <span class="main-color">details</span></h1>
+        </div>
+        <div class="card-body">
+          <!-- User Edit Form - Start -->
+          <form method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  {{ form.username }}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  {{ form.email }}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  {{ form.first_name }}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  {{ form.last_name }}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  {{ form.introduction }}
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='{% url 'account:dashboard' %}'">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+          <!-- User Edit Form - End -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+<!-- Dashboard/Profile Content - End -->
