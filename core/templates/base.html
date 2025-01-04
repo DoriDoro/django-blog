@@ -98,11 +98,7 @@
                   <!-- Base Menu - Start -->
                   <div class="p-4 mt-4 sub-title">
                     <div class="mobile-show">
-                      <ul class="menu-link">
-                        <li><a href="{% url 'blog:post_list' %}" title="Go to Home Page">Home</a></li>
-                        <li><a href="{% url 'blog:about_me' %}" title="Visit About">About</a></li>
-                        <li><a href="{% url 'contact:contact_me' %}" title="Contact Me">Contact</a></li>
-                      </ul>
+                      {% include 'menu/menu_main.html' %}
                     </div>
                     <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h1>Dori's Python Life in Words</h1></a>
                     {% block menu %}
