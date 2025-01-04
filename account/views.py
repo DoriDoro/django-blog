@@ -1,8 +1,10 @@
 from django.contrib.auth import get_user_model, login
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 
-from account.forms import RegistrationForm
+from account.forms import RegistrationForm, CustomAuthenticationForm
 
 UserModel = get_user_model()
 
@@ -17,3 +19,15 @@ class RegistrationView(CreateView):
         response = super().form_valid(form)
         login(self.request, self.object)
         return response
+
+
+class CustomLoginView(LoginView):
+    form_class = CustomAuthenticationForm
+
+
+class DashboardProfileView(LoginRequiredMixin, DetailView):
+    model = UserModel
+    template_name = "profile/dashboard.html"
+
+    def get_object(self, queryset=None):
+        return self.request.user

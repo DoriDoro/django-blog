@@ -6,9 +6,11 @@ app_name = "account"
 
 urlpatterns = [
     path("register/", views.RegistrationView.as_view(), name="register"),
+    path("login/", views.CustomLoginView.as_view(), name="login"),
     path(
         "logout/",
         auth_views.LogoutView.as_view(),
         name="logout",
     ),
+    path("profile/", views.DashboardProfileView.as_view(), name="dashboard"),
 ]

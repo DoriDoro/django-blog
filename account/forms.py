@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django import forms
 
 UserModel = get_user_model()
@@ -75,3 +75,29 @@ class RegistrationForm(UserCreationForm):
             "password2",
             "introduction",
         ]
+
+
+class CustomAuthenticationForm(AuthenticationForm):
+    username = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "Enter your username",
+                "aria-label": "Enter your username",
+                "autofocus": True,
+            }
+        ),
+        label="",
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "Enter your password",
+                "aria-label": "Enter your password",
+                "autocomplete": "current-password",
+            }
+        ),
+        label="",
+        strip=False,
+    )

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %} - Log-in{% endblock %}
+
+<!-- Log in Form Content - Start -->
+{% block content %}
+  <div class="mx-4 mb-4 content-page">
+    <div class="col-md-12 blog-post">
+      <h1>Log-<span class="main-color">in</span></h1>
+      {% if form.errors %}
+        <p class="mb-4">
+          Your username and password didn't match.
+          Please try again.
+        </p>
+      {% else %}
+        <p>To <span class="main-color">register</span> click <a href="{% url 'account:register' %}">here</a> </p>
+      {% endif %}
+      <!-- Login in Form - Start -->
+      <form action="{% url 'account:login' %}" method="post" class="my-4">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.username }}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.password }}
+            </div>
+          </div>
+        </div>
+        {% csrf_token %}
+        <button type="submit" class="btn btn-secondary" onclick="window.location.href='{% url 'blog:post_list' %}'">Cancel</button>
+        <input type="hidden" name="next" value="{{ next }}" />
+        <button type="submit" class="btn btn-primary">Log-in</button>
+      </form>
+      <!-- Login in Form - End -->
+      <!-- Password rest - Start -->
+
+
+      <!-- Password rest - End -->
+    </div>
+  </div>
+{% endblock %}
+<!-- Log in Form Content - End -->
