@@ -29,6 +29,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("blog/", include("blog.urls", namespace="blog")),
     path("", RedirectView.as_view(url="/blog/", permanent=True)),
+    path("", include("core.urls", namespace="core")),
+    path("account/", include("account.urls", namespace="account")),
     path("contact/", include("contact.urls", namespace="contact")),
     path(
         "sitemap.xml",
@@ -36,7 +38,6 @@ urlpatterns = [
         {"sitemaps": sitemaps},
         name="django.contrib.sitemaps.views.sitemap",
     ),
-    path("", include("core.urls", namespace="core")),
 ]
 
 if settings.DEBUG:

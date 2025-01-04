@@ -31,7 +31,8 @@
           <h2>Search for posts:</h2>
           <form method="get">
             {{ form.as_p }}
-            <input class="btn btn-primary" type="submit" value="Search">
+            <button type="submit" class="btn btn-secondary" onclick="window.location.href='{% url 'blog:post_list' %}'">Cancel</button>
+            <button type="submit" class="btn btn-primary">Search</button>
           </form>
         </div>
       {% endif %}

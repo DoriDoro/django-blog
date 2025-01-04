@@ -10,6 +10,46 @@ UserModel = get_user_model()
 
 
 class ContactRequestForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["first_name"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Your First name",
+                "aria-label": "Your First name",
+            }
+        )
+        self.fields["last_name"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Your Last name",
+                "aria-label": "Your Last name",
+            }
+        )
+        self.fields["email"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Your Email Address",
+                "aria-label": "Your Email Address",
+            }
+        )
+        self.fields["subject"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "What is your request about?",
+                "aria-label": "What is your request about?",
+            }
+        )
+        self.fields["message"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "rows": 6,
+                "placeholder": "Your message",
+                "aria-label": "Your message",
+            }
+        )
+
     class Meta:
         model = ContactRequest
         exclude = ["submitted_at", "customer_feedback"]
@@ -19,44 +59,6 @@ class ContactRequestForm(forms.ModelForm):
             "email": "",
             "subject": "",
             "message": "",
-        }
-        widgets = {
-            "first_name": forms.TextInput(
-                attrs={
-                    "class": "form-control",
-                    "placeholder": "Your First name",
-                    "aria-label": "Your First name",
-                },
-            ),
-            "last_name": forms.TextInput(
-                attrs={
-                    "class": "form-control",
-                    "placeholder": "Your Last name",
-                    "aria-label": "Your Last name",
-                },
-            ),
-            "email": forms.EmailInput(
-                attrs={
-                    "class": "form-control",
-                    "placeholder": "Your Email Address",
-                    "aria-label": "Your Email Address",
-                }
-            ),
-            "subject": forms.TextInput(
-                attrs={
-                    "class": "form-control",
-                    "placeholder": "Enter the subject",
-                    "aria-label": "Enter the subject",
-                }
-            ),
-            "message": forms.Textarea(
-                attrs={
-                    "class": "form-control",
-                    "rows": 6,
-                    "placeholder": "Your message",
-                    "aria-label": "Your message",
-                }
-            ),
         }
 
     def send_email(self):

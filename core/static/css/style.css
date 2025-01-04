@@ -73,12 +73,12 @@ a {
     color: rgba(13, 110, 253, 1);
 }
 
-a:hover,rgba(13, 110, 253, 1)
+a:hover,
 a:focus,
 a:active {
     text-decoration: none;
     outline: none;
-    color: #333333;
+    color: #160960 !important;
 }
 
 b {
@@ -177,16 +177,33 @@ button {
 
 .menu-link li a {
     display: block;
-    color: #333333;
+    color: #160960 !important;
     text-align: center;
     font-size: 13px;
     transition: all 0.3s ease-in-out;
 }
 
 .menu-link li a:hover {
-    color: rgba(13, 110, 253, 1);
+    color: rgba(13, 110, 253, 1) !important;
 }
 
+.logout-form {
+    display: inline; /* Ensures the form stays inline with navbar items */
+    margin: 0;
+    padding: 0;
+}
+
+.logout-button {
+    border: none;
+    background: none;
+    color: #160960 !important;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none; /* Removes default button styling */
+    display: inline-block;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+}
 
 /* Fixed Left Sidebar */
 

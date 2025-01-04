@@ -26,7 +26,10 @@
         <form method="post" class="mt-4">
           {{ form.as_p }}
           {% csrf_token %}
-          <input class="btn btn-primary" type="submit" value="Send e-mail">
+          <button type="button" class="btn btn-secondary" onclick="window.location.href='{{ post.get_absolute_url }}'">
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary">Send e-mail</button>
         </form>
       {% endif %}
       <!-- Shared Post - End -->

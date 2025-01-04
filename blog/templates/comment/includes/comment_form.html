@@ -8,9 +8,10 @@
         <div class="form-group">
           {{ form.body }}
         </div>
-        <p>
-          <input class="btn btn-primary" type="submit" value="Add comment">
-        </p>
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='{{ post.get_absolute_url }}'">
+          Cancel
+        </button>
+        <button type="submit" class="btn btn-primary">Add comment</button>
       </form>
     </div>
     <!-- Add a Comment - End -->

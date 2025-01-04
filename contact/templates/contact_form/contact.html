@@ -4,53 +4,54 @@
 
 <!-- Contact Form Content - Start -->
 {% block content %}
-<div class="mx-4 mb-4 content-page">
-  <div class="col-md-12 blog-post">
-    <h1>Contact <span class="main-color">me</span></h1>
-    <p class="mb-4">
-      Have any questions, feedback, or just want to say hello? Fill out the form below, and I’ll
-      get back to you as soon as possible. I look forward to hearing from you!
-    </p>
-    <!-- Contact Form - Start -->
-    <form method="post">
-      {% csrf_token %}
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            {{ form.first_name }}
+  <div class="mx-4 mb-4 content-page">
+    <div class="col-md-12 blog-post">
+      <h1>Contact <span class="main-color">me</span></h1>
+      <p class="mb-4">
+        Have any questions, feedback, or just want to say hello? Fill out the form below, and I’ll
+        get back to you as soon as possible. I look forward to hearing from you!
+      </p>
+      <!-- Contact Form - Start -->
+      <form method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.first_name }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.last_name }}
+            </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="form-group">
-            {{ form.last_name }}
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              {{ form.email }}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            {{ form.email }}
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="form-group">
+              {{ form.subject }}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-9">
-          <div class="form-group">
-            {{ form.subject }}
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              {{ form.message }}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="form-group">
-            {{ form.message }}
-          </div>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Send E-mail</button>
-    </form>
-    <!-- Contact Form - End -->
+        <button type="submit" class="btn btn-secondary" onclick="window.location.href='{% url 'blog:post_list' %}'">Cancel</button>
+        <button type="submit" class="btn btn-primary">Send E-mail</button>
+      </form>
+      <!-- Contact Form - End -->
+    </div>
   </div>
-</div>
 {% endblock %}
 <!-- Contact Form Content - End -->

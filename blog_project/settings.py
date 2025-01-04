@@ -40,6 +40,9 @@ ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
 # Application definition
 
 INSTALLED_APPS = [
+    # custom apps
+    "account",
+    # built-in
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -50,7 +53,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.postgres",
     # custom apps
-    "account",
     "blog",
     "core",
     "contact",
@@ -159,6 +161,13 @@ STATICFILES_DIRS = [
 
 # set the User
 AUTH_USER_MODEL = "account.User"
+
+
+# Authentication
+LOGIN_REDIRECT_URL = "account:dashboard"
+LOGIN_URL = "account:login"
+LOGOUT_REDIRECT_URL = "blog:post_list"
+LOGOUT_URL = "account:logout"
 
 
 # Email server configuration

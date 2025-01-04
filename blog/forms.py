@@ -54,18 +54,21 @@ class EmailPostForm(forms.Form):
 
 
 class CommentForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["body"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "rows": 4,
+                "placeholder": "Your comment",
+                "aria-label": "Your comment",
+            }
+        )
+
     class Meta:
         model = Comment
         fields = ["body"]
-        widgets = {
-            "body": forms.Textarea(
-                attrs={
-                    "class": "form-control",
-                    "rows": 4,
-                    "placeholder": "Your comment",
-                }
-            ),
-        }
 
 
 class SearchForm(forms.Form):
