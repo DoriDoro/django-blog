@@ -29,7 +29,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("blog/", include("blog.urls", namespace="blog")),
     path("", RedirectView.as_view(url="/blog/", permanent=True)),
-    path("", include("core.urls", namespace="core")),
     path("account/", include("account.urls", namespace="account")),
     path("contact/", include("contact.urls", namespace="contact")),
     path(
@@ -38,7 +37,10 @@ urlpatterns = [
         {"sitemaps": sitemaps},
         name="django.contrib.sitemaps.views.sitemap",
     ),
+    path("tinymce/", include("tinymce.urls")),
+    path("", include("core.urls", namespace="core")),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2,11 +2,19 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from taggit.managers import TaggableManager
+from tinymce.models import HTMLField
 
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(status=Post.Status.PUBLISHED)
+
+
+def _post_image_upload_path(instance, filename):
+    """
+    Upload images to a path like: media/images/posts/<author_id>/<post_slug>/<filename>
+    """
+    return f"images/posts/{instance.author}-{instance.author.id}/{instance.slug}/{filename}"
 
 
 class Post(models.Model):
@@ -16,7 +24,8 @@ class Post(models.Model):
 
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date="publish")
-    body = models.TextField()
+    body = HTMLField()
+    image = models.ImageField(upload_to=_post_image_upload_path, blank=True, null=True)
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -46,7 +55,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    body = models.TextField()
+    body = HTMLField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=True)

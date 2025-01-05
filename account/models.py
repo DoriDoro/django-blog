@@ -1,9 +1,18 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from tinymce.models import HTMLField
+
+
+def _user_directory_path(instance, filename):
+    # Generate a path: media/images/users/<user_id>/<filename>
+    return f"images/users/{instance.username}-{instance.id}/{filename}"
 
 
 class User(AbstractUser):
-    introduction = models.TextField(blank=True, null=True)
+    introduction = HTMLField(blank=True, null=True)
+    photo = models.ImageField(upload_to=_user_directory_path, blank=True, null=True)
+    can_be_contacted = models.BooleanField(blank=True, null=True)
+    can_data_be_shared = models.BooleanField(blank=True, null=True)
     professions = models.ManyToManyField("Profession", related_name="users", blank=True)
     services = models.ManyToManyField("Service", related_name="users", blank=True)
     websites = models.ManyToManyField("Website", related_name="users", blank=True)

@@ -1,11 +1,12 @@
 black==24.8.0
-click==8.1.7
 Django==5.1.1
 django-taggit==6.1.0
+django-tinymce==4.1.0
 flake8==7.1.1
 gunicorn==23.0.0
 ipython==8.27.0
 Markdown==3.6
+pillow==11.1.0
 psycopg==3.1.18
 python-decouple==3.8
 sentry-sdk==2.19.2

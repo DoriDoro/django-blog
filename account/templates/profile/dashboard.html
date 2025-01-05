@@ -23,12 +23,28 @@
         <div class="card-body">
           <p><strong>Username:</strong> {{ user.username }}</p>
           <p><strong>Email:</strong> {{ user.email }}</p>
-          <p><strong>Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+          {% if user.first_name or user.last_name %}
+            <p>
+              <strong>
+                {% if user.first_name and user.last_name %}
+                    Full Name:
+                {% elif user.first_name %}
+                    First Name:
+                {% else %}
+                    Last Name:
+                {% endif %}
+              </strong> {{ user.first_name }} {{ user.last_name }}
+            </p>
+          {% endif %}
           <p><strong>Joined:</strong> {{ user.date_joined }}</p>
         </div>
         {% if user.introduction %}
           <div class="card-body">
-            <p>{{ user.introduction }}</p>
+            <p>
+              <strong>Introduction of yourself:</strong>
+              <br>
+              {{ user.introduction }}
+            </p>
           </div>
         {% endif %}
       </div>

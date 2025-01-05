@@ -12,6 +12,9 @@ class CustomUserAdmin(UserAdmin):
     # Add 'introduction' to the fieldsets dynamically
     UserAdmin.fieldsets += (
         ("About Page Text", {"fields": ("introduction",)}),
+        ("Photo", {"fields": ("photo",)}),
+        ("Can be contacted?", {"fields": ("can_be_contacted",)}),
+        ("can data be shared?", {"fields": ("can_data_be_shared",)}),
         ("Professions", {"fields": ("professions",)}),
         ("Services", {"fields": ("services",)}),
         ("Websites", {"fields": ("websites",)}),

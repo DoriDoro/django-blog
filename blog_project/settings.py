@@ -18,7 +18,7 @@ from decouple import config
 
 
 # Name of the project:
-PROJECT_NAME = "Django Blog - Dori's Python Life in Words"
+PROJECT_NAME = config("PROJECT_NAME")
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     "contact",
     # packages/libraries:
     "taggit",
+    "tinymce",
 ]
 
 MIDDLEWARE = [
@@ -160,6 +161,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "core/static",
 ]
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "core/media")
+
 # set the User
 AUTH_USER_MODEL = "account.User"
 
@@ -183,6 +187,36 @@ CONTACT_EMAIL = config("CONTACT_EMAIL")
 
 # Sitemap framework
 SITE_ID = 2
+
+
+# config of TinyMCE editor:
+TINYMCE_DEFAULT_CONFIG = {
+    "cleanup_on_startup": True,
+    "custom_undo_redo_levels": 20,
+    "selector": "textarea",
+    "theme": "silver",
+    "plugins": """
+            textcolor save link image media preview codesample contextmenu
+            table code lists fullscreen  insertdatetime  nonbreaking
+            contextmenu directionality searchreplace wordcount visualblocks
+            visualchars code fullscreen autolink lists  charmap print  hr
+            anchor pagebreak
+            """,
+    "toolbar1": """
+            fullscreen preview bold italic underline | fontselect,
+            fontsizeselect  | forecolor backcolor | alignleft alignright |
+            aligncenter alignjustify | indent outdent | bullist numlist table |
+            | link image media | codesample |
+            """,
+    "toolbar2": """
+            visualblocks visualchars |
+            charmap hr pagebreak nonbreaking anchor |  code |
+            """,
+    "contextmenu": "formats | link image",
+    "menubar": True,
+    "statusbar": True,
+}
+TINYMCE_SPELLCHECKER = True
 
 
 # Settings for Sentry
