@@ -8,7 +8,7 @@ from blog.models import Post
 
 
 class LatestPostsFeed(Feed):
-    title = "Dori's Python Life in Words"
+    title = "Doro's Python Life in Words"
     link = reverse_lazy("blog:post_list")
     description = "New posts of my blog."
 
