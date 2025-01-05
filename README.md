@@ -43,5 +43,5 @@ practices.
 
 
 ## Integrate a free HTML-CSS-Bootstrap template:
-https://www.free-css.com/free-css-templates/page212/devblog
+https://www.free-css.com/free-css-templates/page212/devblog <br>
 This free HTML-CSS-Bootstrap template was customized for personal use and updated to Bootstrap 5.
