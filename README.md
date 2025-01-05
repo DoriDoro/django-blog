@@ -1,4 +1,4 @@
-# Django Blog Application – Dori's Python Life in Words 
+# Django Blog Application – Doro's Python Life in Words 
 
 ## Description:
 This project is a Django-based blog application that allows users to create and comment on blog 
@@ -32,6 +32,16 @@ practices.
 - **Search Functionality**:
   - Implemented a full-text search engine using Django and PostgreSQL.
 
+- **Contact Form**:
+  - Developed a contact form to facilitate inquiries, feedback, and job opportunities.
 
-## Integrate a free HTML-CSS template:
+- **Authentication**:
+  - Integrated and customized authentication URLs and views using Django's built-in authentication system.
+
+- **Context Processor**:
+  - Implemented a custom context processor to inject dynamic data into templates.
+
+
+## Integrate a free HTML-CSS-Bootstrap template:
 https://www.free-css.com/free-css-templates/page212/devblog
+This free HTML-CSS-Bootstrap template was customized for personal use and updated to Bootstrap 5.
