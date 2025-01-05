@@ -3,66 +3,80 @@
 
 {% block title %} - {{ post.title }} {% endblock %}
 
+<!-- Post/Article Detail Menu - Start -->
+{% block menu %}
+  <a href="{% url 'blog:post_share' post.id %}" class="smoth-scroll"
+     title="Send article via Email"><i class="icon-bubbles"></i></a>
+{% endblock %}
+<!-- Post/Article Detail Menu - End -->
+
+<!-- Post/Article and Comment Content - Start -->
 {% block content %}
-  <div class="col-md-9">
-    <div class="col-md-12 page-body">
-      <div class="row">
-        <!-- Detailed Post - Start -->
-        <div class="sub-title">
-          <a href="{% url 'blog:post_list' %}" title="Go to Home Page"><h2>Back</h2></a>
-          <a href="{% url 'blog:post_share' post.id %}" class="smoth-scroll" title="Send recommendation via Email"><i class="icon-bubbles"></i></a>
-        </div>
-
-        <div class="col-md-12 content-page">
-          <div class="col-md-12 blog-post">
-            <!-- Post Headline - Start -->
-            <div class="post-title">
-             <h1>{{ post.title }}</h1>
-            </div>
-            <!-- Post Headline - End -->
-
-            <!-- Post Detail - Start -->
-            <div class="post-info">
-              <span>Published {{ post.publish }} by <a href="#" target="_blank">{{ post.author }}</a></span>
-            </div>
-            <!-- Post Detail - End -->
-
-            <p>{{ post.body|markdown }}</p>
-
-            <!-- Similar Post - Start -->
-            <h2>Similar posts</h2>
-            {% for post in similar_posts %}
-              <p>
-                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-              </p>
-            {% empty %}
-              There are no similar posts yet.
-            {% endfor %}
-            <!-- Similar Post - End -->
-          </div>
-        </div>
-
-        <!-- Comments - Start -->
-        <div class="col-md-12 post-comment">
-          {% with comments.count as total_comments %}
-            <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
-          {% endwith %}
-          {% for comment in comments %}
-            <div>
-              <p>
-                Comment {{ forloop.counter }} by <strong>{{ comment.user.username }}</strong> {{ comment.created }}
-              </p>
-              {{ comment.body|linebreaks }}
-            </div>
-          {% empty %}
-            <p>There are no comments.</p>
-          {% endfor %}
-          {% include "post/includes/comment_form.html" %}
-        </div>
-        <!-- Comments - End -->
-
+  <div class="mx-4 content-page">
+    <div class="col-md-12 blog-post">
+      <!-- Post/Article Content - Start -->
+      <div class="post-title">
+        <h1>{{ post.title }}</h1>
       </div>
-      <!-- Detailed Post - End -->
+
+      <div class="post-info">
+        <span>
+          Published {{ post.publish }} by <strong><a href="{% url 'blog:about_me' %}"
+            title="Visit About" target="_blank">{{ post.author }}</a></strong>
+        </span>
+      </div>
+
+      <p>{{ post.body|markdown }}</p>
+
+      <div class="post-info">
+        <span>
+          Last Updated {{ post.updated }} by
+          <strong>
+            <a href="{% url 'blog:about_me' %}" title="Visit About" target="_blank">{{ post.author }}</a>
+          </strong>
+        </span>
+      </div>
+      <!-- Post/Article Content - End -->
+
+      <!-- Similar Posts Content - Start -->
+      <div class="mt-4 you-may-also-like">
+        <h3>Similar posts</h3>
+        <div class="row">
+          {% for post in similar_posts %}
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <a href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
+          </div>
+          {% empty %}
+            <p>There are no similar posts yet.</p>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- Similar Posts Content - End -->
     </div>
   </div>
+
+  <!-- Comments Content - Start -->
+  <div class="m-4 post-comment">
+    {% with comments.count as total_comments %}
+      <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
+    {% endwith %}
+    {% for comment in comments %}
+    <div>
+      <span>
+        Comment {{ forloop.counter }} by <strong><a href="{% url 'blog:about_me' %}"
+          target="_blank">{{ comment.user.username }}</a></strong> {{ comment.created }}
+      </span>
+      <div class="comment-body">
+        {{ comment.body|linebreaks }}
+      </div>
+    </div>
+    {% empty %}
+      <p>There are no comments.</p>
+    {% endfor %}
+    <!-- Comments Form Content - Start -->
+    {% include "comment/includes/comment_form.html" %}
+    <!-- Comments Form Content - End -->
+  </div>
+  <!-- Comments Content - End -->
 {% endblock %}
+<!-- Post/Article and Comment Content - Start -->

@@ -11,9 +11,15 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
-from pathlib import Path
+import sentry_sdk
 
+from pathlib import Path
 from decouple import config
+
+
+# Name of the project:
+PROJECT_NAME = "Django Blog - Doro's Python Life in Words"
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,16 +29,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "True").lower() == "false"
+DEBUG = config("DEBUG", "True")
 
-ALLOWED_HOSTS = (
-    os.environ.get("ALLOWED_HOSTS").split(",")
-    if os.environ.get("ALLOWED_HOSTS")
-    else []
-)
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
 
 
 # Application definition
@@ -51,6 +53,7 @@ INSTALLED_APPS = [
     "account",
     "blog",
     "core",
+    "contact",
     # packages/libraries:
     "taggit",
     "tinymce",
@@ -58,6 +61,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -99,6 +103,16 @@ DATABASES = {
         "HOST": config("DB_HOST", "localhost"),
         "PORT": "5432",
     }
+}
+
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
 }
 
 
@@ -155,10 +169,11 @@ EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
+CONTACT_EMAIL = config("CONTACT_EMAIL")
 
 
 # Sitemap framework
-SITE_ID = 1
+SITE_ID = 2
 
 
 # config of TinyMCE editor:
@@ -189,3 +204,20 @@ TINYMCE_DEFAULT_CONFIG = {
     "statusbar": True,
 }
 TINYMCE_SPELLCHECKER = True
+
+
+# Settings for Sentry
+SENTRY_DSN = config("SENTRY_DSN")
+if SENTRY_DSN:
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for tracing.
+        traces_sample_rate=1.0,
+        _experiments={
+            # Set continuous_profiling_auto_start to True
+            # to automatically start the profiler on when
+            # possible.
+            "continuous_profiling_auto_start": True,
+        },
+    )

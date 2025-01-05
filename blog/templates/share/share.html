@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} - Share a Django Blog post {% endblock %}
+
+<!-- Share Content - Start -->
+{% block content %}
+  <div class="mx-4 mb-4 content-page">
+    <div class="blog-post">
+      <!-- Shared Post - Start -->
+      {% if sent %}
+        <h1>E-mail successfully sent</h1>
+        <p>
+          The article
+          <span class="share-content">
+            <a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a>
+          </span>
+          was successfully sent to
+          <span class="share-content">{{ form.cleaned_data.to }}</span>.
+        </p>
+      {% else %}
+        <h1>Share
+          <span class="share-content">
+            <a href="{{ post.get_absolute_url }}">"{{ post.title }}"</a>
+          </span> by e-mail
+        </h1>
+        <form method="post" class="mt-4">
+          {{ form.as_p }}
+          {% csrf_token %}
+          <input class="btn btn-primary" type="submit" value="Send e-mail">
+        </form>
+      {% endif %}
+      <!-- Shared Post - End -->
+    </div>
+  </div>
+{% endblock %}
+<!-- Share Content - End -->

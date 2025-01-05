@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load blog_tags %}
+
+{% block title %} - Search {% endblock %}
+
+<!-- Search Results Content - Start -->
+{% block content %}
+  <div class="mx-4 mb-4 content-page">
+    <div class="blog-post">
+      {% if query %}
+        <div>
+          <p>Posts containing "{{ query }}"</p>
+        </div>
+        {% for post in results %}
+        <div class="post-title">
+          <a href="{{ post.get_aboslute_url }}">
+            <h2>{{ post.title }}</h2>
+          </a>
+        </div>
+        {{ post.body|markdown|truncatewords_html:12 }}
+          {% if not forloop.last %}
+          <hr>
+          {% endif %}
+        {% empty %}
+          <p>There are no results for your search.</p>
+        {% endfor %}
+        <hr>
+        <p><a href="{% url 'blog:post_search' %}">Search again</a></p>
+      {% else %}
+        <div class="post-title">
+          <h2>Search for posts:</h2>
+          <form method="get">
+            {{ form.as_p }}
+            <input class="btn btn-primary" type="submit" value="Search">
+          </form>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+<!-- Search Results Content - End -->

@@ -1,12 +1,15 @@
+from django.contrib.auth import get_user_model
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.core.mail import send_mail
 from django.db.models import Count
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import ListView, DetailView, FormView
+from django.views.generic import ListView, DetailView, FormView, TemplateView
 from taggit.models import Tag
 
 from blog.forms import EmailPostForm, CommentForm, SearchForm
 from blog.models import Post
+
+UserModel = get_user_model()
 
 
 class PostListView(ListView):
@@ -57,7 +60,7 @@ class PostDetailView(DetailView):
         )
         similar_posts = similar_posts.annotate(same_tags=Count("tags")).order_by(
             "-same_tags", "-publish"
-        )[:4]
+        )[:3]
         return similar_posts
 
 
@@ -90,18 +93,20 @@ def post_share(request, post_id):
         form = EmailPostForm()
 
     return render(
-        request, "post/share.html", {"post": post, "form": form, "sent": sent}
+        request, "share/share.html", {"post": post, "form": form, "sent": sent}
     )
 
 
 class PostCommentView(FormView):
-    template_name = "post/comment.html"
+    template_name = "comment/comment.html"
     form_class = CommentForm
 
     def form_valid(self, form):
+        print("valid")
         post_id = self.kwargs["post_id"]
         post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
         comment = form.save(commit=False)
+        comment.user = self.request.user
         comment.post = post
         comment.save()
         return render(
@@ -115,6 +120,7 @@ class PostCommentView(FormView):
         )
 
     def form_invalid(self, form):
+        print("invalid")
         post_id = self.kwargs["post_id"]
         post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
         return render(
@@ -148,5 +154,28 @@ def post_search(request):
             )
 
     return render(
-        request, "post/search.html", {"form": form, "query": query, "results": results}
+        request,
+        "search/search.html",
+        {"form": form, "query": query, "results": results},
     )
+
+
+class AboutMeView(TemplateView):
+    template_name = "about/about_me.html"
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        doridoro = UserModel.objects.filter(username="DoriDoro").first()
+        if doridoro:
+            context["doridoro_details"] = {
+                "first_name": doridoro.first_name,
+                "last_name": doridoro.last_name,
+                "introduction": doridoro.introduction,
+                "professions": list(
+                    doridoro.professions.values_list("name", flat=True)
+                ),
+                "services": list(doridoro.services.values_list("name", flat=True)),
+                "websites": list(doridoro.websites.values_list("url", "name")),
+            }
+
+        return context

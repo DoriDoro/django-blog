@@ -14,5 +14,7 @@ urlpatterns = [
     ),
     path("latest/feed/", LatestPostsFeed(), name="post_feed"),
     path("search/", views.post_search, name="post_search"),
+    path("about/", views.AboutMeView.as_view(), name="about_me"),
+    # path("about/", views.AboutUserView.as_view(), name="about_user"),
     path("<slug:slug>/", views.PostDetailView.as_view(), name="post_detail"),
 ]

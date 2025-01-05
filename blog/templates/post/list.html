@@ -3,53 +3,80 @@
 
 {% block title %} - Dori's Python Life in Words {% endblock %}
 
-{% block content %}
-  <!-- Blog Post (Right Sidebar) Start -->
-  <div class="col-md-9">
-    <div class="col-md-12 page-body">
-      <div class="row">
-        <div class="sub-title">
-          <h2>Dori's Python Life in Words</h2>
-          <a href="contact.html"><i class="icon-envelope"></i></a>
-        </div>
+<!-- Posts/Articles Menu - Start -->
+{% block menu %}
+  <a href="{% url 'contact:contact_me' %}" title="Contact Me"><i class="icon-envelope"></i></a>
+{% endblock %}
+<!-- Posts/Articles Menu - Start -->
 
-        {% if tag %}
-        <div class="sub-title">
-            <h2>Posts tagged with "{{ tag.name }}"</h2>
+<!-- Posts/Articles Content - Start -->
+{% block content %}
+  {% if tag %}
+    <div class="mx-4">
+      <p>Posts tagged with "{{ tag.name }}"</p>
+    </div>
+  {% else %}
+    <div class="mx-4">
+      <p>
+        In my blog, you'll find a selection of articles focused on <strong>Python
+        programming</strong>, <strong>software development</strong>, and
+        <strong>technology</strong>. These articles are born from
+        <strong>real-life experiences</strong>, often written after <strong>tackling
+        complex problems</strong> or <strong>overcoming challenges</strong> during my coding
+        journey. They serve as my personal reference—tips and
+        tricks that help me streamline my coding process, as well as reminders on how to handle
+        certain scenarios. The articles provide solutions, best practices, and guidelines for
+        a variety of programming topics, ranging from specific coding techniques to general
+        development workflows.
+
+        Whether you're looking to solve a particular problem, learn something about the Django or
+        even Flask framework, or simply explore different programming concepts, this blog
+        is here to offer valuable insights based on my hands-on experience.
+      </p>
+    </div>
+  {% endif %}
+
+  <!-- List of Posts - Start -->
+  <div class="mx-4 content-page">
+    <div class="blog-post">
+      {% for post in posts %}
+        <div class="post-title">
+          <a href="{{ post.get_absolute_url }}">
+            <h1>{{ post.title }}</h1>
+          </a>
         </div>
+        {% if post.tags.exists %}
+        <p>
+          <strong>Tags:</strong>
+          {% for tag in post.tags.all %}
+          <a href="{% url 'blog:post_list_by_tag' tag.slug %}" title="Check out the Tag">
+            {{ tag.name }}
+          </a>{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </p>
         {% endif %}
 
-        <!-- Blog Post Start -->
-        <div class="col-md-12 content-page">
-          {% for post in posts %}
-            <div class="post-title">
-              <a href="{{ post.get_absolute_url }}">
-                <h1>{{ post.title }}</h1>
-              </a>
-            </div>
-            {% if post.tags.exists %}
-              <p>
-                <strong>Tags:</strong>
-                {% for tag in post.tags.all %}
-                  <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
-                    {{ tag.name }}
-                  </a>{% if not forloop.last %}, {% endif %}
-                {% endfor %}
-              </p>
-              {% endif %}
-
-            <div class="post-info">
-              <span>Published {{ post.publish }} by {{ post.author }}</span>
-            </div>
-            <div class="post-body">
-              {{ post.body|markdown|truncatewords:30 }}
-              {% if not forloop.last %} <hr> {% endif %}
-            </div>
-          {% endfor %}
-
+        <div class="post-info">
+          <span>
+            Published {{ post.publish }} by <strong><a href="{% url 'blog:about_me' %}"
+              title="Visit About" target="_blank">{{ post.author }}</a></strong>
+          </span>
         </div>
-          {% include "pagination.html" with page=page_obj %}
-      </div>
+        <div class="post-body">
+          {{ post.body|markdown|truncatewords:50 }}
+          {% if not forloop.last %}
+            <hr>
+          {% endif %}
+        </div>
+      {% endfor %}
     </div>
   </div>
+  <!-- List of Posts - End -->
+
+  <!-- Pagination - Start -->
+  <div class="m-4">
+    {% include "pagination.html" with page=page_obj %}
+  </div>
+  <!-- Pagination  End -->
 {% endblock %}
+<!-- Posts/Articles Content - Start -->

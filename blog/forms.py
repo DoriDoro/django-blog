@@ -11,33 +11,53 @@ class EmailPostForm(forms.Form):
     name = forms.CharField(
         max_length=25,
         widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Your name"}
+            attrs={
+                "class": "form-control",
+                "placeholder": "Your name",
+                "aria-label": "Your name",
+            }
         ),
+        label="",
     )
     email = forms.EmailField(
         widget=forms.EmailInput(
-            attrs={"class": "form-control", "placeholder": "Your Email address"}
-        )
+            attrs={
+                "class": "form-control",
+                "placeholder": "Your Email Address",
+                "aria-label": "Your Email Address",
+            }
+        ),
+        label="Your Email Address",
     )
     to = forms.EmailField(
         widget=forms.EmailInput(
-            attrs={"class": "form-control", "placeholder": "Email address of receiver"}
-        )
+            attrs={
+                "class": "form-control",
+                "placeholder": "Email Address of receiver",
+                "aria-label": "Email Address of receiver",
+            }
+        ),
+        label="Receiver Email Address",
     )
     comments = forms.CharField(
         required=False,
         widget=forms.Textarea(
-            attrs={"class": "form-control", "rows": 6, "placeholder": "Your message"}
+            attrs={
+                "class": "form-control",
+                "rows": 6,
+                "placeholder": "Your message ...",
+                "aria-label": "Your message ...",
+            }
         ),
+        label="",
     )
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ["user", "body"]
+        fields = ["body"]
         widgets = {
-            "user": forms.Select(attrs={"class": "form-control"}),
             "body": forms.Textarea(
                 attrs={
                     "class": "form-control",
@@ -47,15 +67,12 @@ class CommentForm(forms.ModelForm):
             ),
         }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields["user"].queryset = UserModel.objects.filter(is_active=True)
-
 
 class SearchForm(forms.Form):
     query = forms.CharField(
         max_length=250,
         widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Enter your search"}
+            attrs={"class": "form-control", "placeholder": "Enter a word or two..."}
         ),
+        label="",
     )
