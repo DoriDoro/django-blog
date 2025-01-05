@@ -182,7 +182,7 @@ CONTACT_EMAIL = config("CONTACT_EMAIL")
 
 
 # Sitemap framework
-SITE_ID = 1
+SITE_ID = 2
 
 
 # Settings for Sentry
