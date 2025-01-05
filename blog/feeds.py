@@ -1,4 +1,5 @@
 import markdown
+from django.conf import settings
 
 from django.contrib.syndication.views import Feed
 from django.template.defaultfilters import truncatewords_html
@@ -8,7 +9,7 @@ from blog.models import Post
 
 
 class LatestPostsFeed(Feed):
-    title = "Dori's Python Life in Words"
+    title = settings.PROJECT_NAME
     link = reverse_lazy("blog:post_list")
     description = "New posts of my blog."
 
