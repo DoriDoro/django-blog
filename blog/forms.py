@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
 
-from blog.models import Comment
-
+from blog.models import Comment, Post
 
 UserModel = get_user_model()
 
@@ -75,7 +74,59 @@ class SearchForm(forms.Form):
     query = forms.CharField(
         max_length=250,
         widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Enter a word or two..."}
+            attrs={"class": "form-control", "placeholder": "Enter one word or two..."}
         ),
         label="",
     )
+
+
+class PostCreateForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["title"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Enter title",
+                "aria-label": "Enter title",
+            }
+        ),
+        self.fields["body"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Enter content",
+                "aria-label": "Enter content",
+            }
+        ),
+        self.fields["image"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Choose an image",
+                "aria-label": "Choose an image",
+            }
+        ),
+        self.fields["status"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Choose the status",
+                "aria-label": "Choose the status",
+            }
+        ),
+        self.fields["tags"].widget.attrs.update(
+            {
+                "class": "form-control",
+                "placeholder": "Enter tags",
+                "aria-label": "Enter tags",
+            }
+        ),
+
+    class Meta:
+        model = Post
+        fields = ["title", "body", "image", "status", "tags"]
+        labels = {
+            "title": "",
+            "body": "",
+            "image": "",
+            "status": "",
+            "tags": "",
+        }

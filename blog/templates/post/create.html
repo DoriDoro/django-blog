@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} - Create Article{% endblock %}
+
+<!-- Create Post/Article Menu - Start -->
+{% block menu %}
+<a href="{% url 'blog:post_list' %}" title="Got to Home Page"><i class="icon-home"></i></a>
+{% endblock %}
+<!-- Create Post/Article Menu - End -->
+
+<!-- Create Post/Article Content - Start -->
+{% block content %}
+  <div class="mx-4 mb-4 content-page">
+    <div class="blog-post">
+      <div>
+        {% include 'menu/menu_user.html' %}
+      </div>
+      <h1><span class="main-color">Create</span> an article</h1>
+      <form method="post" class="mt-4">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="button" class="btn btn-secondary"
+                onclick="window.location.href='{{ post.get_absolute_url }}'">
+          Cancel
+        </button>
+        <button type="submit" class="btn btn-primary">Add Article</button>
+      </form>
+    </div>
+  </div>
+  {% endblock %}
+  <!-- Create Post/Article Content - End -->

@@ -3,10 +3,16 @@ from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.core.mail import send_mail
 from django.db.models import Count
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import ListView, DetailView, FormView, TemplateView
+from django.views.generic import (
+    ListView,
+    DetailView,
+    FormView,
+    TemplateView,
+    CreateView,
+)
 from taggit.models import Tag
 
-from blog.forms import EmailPostForm, CommentForm, SearchForm
+from blog.forms import EmailPostForm, CommentForm, SearchForm, PostCreateForm
 from blog.models import Post
 
 UserModel = get_user_model()
@@ -64,6 +70,26 @@ class PostDetailView(DetailView):
         return similar_posts
 
 
+class PostCreateView(CreateView):
+    model = Post
+    template_name = "post/create.html"
+    form_class = PostCreateForm
+
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        post.author = self.request.user
+        # slug and taggit
+        post.save()
+        return render(
+            self.request,
+            self.template_name,
+            {
+                "post": post,
+                "form": form,
+            },
+        )
+
+
 def post_share(request, post_id):
     post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
     sent = False
@@ -102,7 +128,6 @@ class PostCommentView(FormView):
     form_class = CommentForm
 
     def form_valid(self, form):
-        print("valid")
         post_id = self.kwargs["post_id"]
         post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
         comment = form.save(commit=False)
@@ -120,7 +145,6 @@ class PostCommentView(FormView):
         )
 
     def form_invalid(self, form):
-        print("invalid")
         post_id = self.kwargs["post_id"]
         post = get_object_or_404(Post, pk=post_id, status=Post.Status.PUBLISHED)
         return render(

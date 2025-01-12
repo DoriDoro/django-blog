@@ -2,11 +2,11 @@
 
 {% block title %} - Dashboard{% endblock %}
 
-<!-- Post/Article Detail Menu - Start -->
+<!-- Dashboard/Profile Detail Menu - Start -->
 {% block menu %}
 <a href="{% url 'blog:post_list' %}" title="Got to Home Page"><i class="icon-home"></i></a>
 {% endblock %}
-<!-- Post/Article Detail Menu - End -->
+<!-- Dashboard/Profile Detail Menu - End -->
 
 <!-- Dashboard/Profile Content - Start -->
 {% block content %}
@@ -43,11 +43,22 @@
             <p>
               <strong>Introduction of yourself:</strong>
               <br>
-              {{ user.introduction }}
+              {{ user.introduction|safe }}
             </p>
           </div>
         {% endif %}
       </div>
+
+      <!-- Create Article Button - Start -->
+        {% if user.id == 2 %}
+          <div>
+            <button type="submit" class="btn btn-primary"
+                    onclick="window.location.href='{% url 'blog:post_create' %}'">
+              Create an article
+            </button>
+          </div>
+        {% endif %}
+        <!-- Create Article Button - End -->
     </div>
   </div>
 {% endblock %}
