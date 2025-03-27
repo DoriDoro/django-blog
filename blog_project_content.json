@@ -1,0 +1,2444 @@
+[
+{
+  "model": "account.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$ug15M6VBzuCMfMxOa12tHb$w3y2Pi1T6XQmUldoox9D4Dy5UuBaAA6xA2JFTPu6Lak=",
+    "last_login": "2025-01-13T21:38:43.734Z",
+    "is_superuser": true,
+    "username": "Admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@mail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-09-27T13:00:41.399Z",
+    "introduction": null,
+    "photo": "",
+    "can_be_contacted": null,
+    "can_data_be_shared": null,
+    "groups": [],
+    "user_permissions": [],
+    "professions": [],
+    "services": [],
+    "websites": []
+  }
+},
+{
+  "model": "account.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$0EvZ5DAWj8wG6H9JOIK4IX$fYjcO9roDFlvNotdwmHP1wD54PeiXjVG/eKvP46xWqA=",
+    "last_login": "2025-01-12T14:37:04.370Z",
+    "is_superuser": false,
+    "username": "DoriDoro",
+    "first_name": "Dorothea",
+    "last_name": "Reher",
+    "email": "dorothea.reher@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-07T16:26:02Z",
+    "introduction": "<p>I am a calm and balanced individual who thrives on activity and continuous learning. Diligence characterises my approach as I am quick to grasp new concepts and adapt to new challenges. My reliability and sensitivity make me a trusted team member, and I prioritise effective communication and organisation in all endeavours. Driven by high personal standards, I exhibit a tendency towards perfectionism in certain areas, particularly in programming. I am committed to developing my skills and expectations in this area and aim to become a reliable and valued asset within my future organisation. Throughout my career I have cultivated a collaborative mindset, recognising the importance of teamwork in achieving collective goals. I derive satisfaction from working with others and contributing to a supportive and cohesive team environment. While I value teamwork, I also enjoy opportunities for independent work and initiative.</p>",
+    "photo": "images/users/2/Screenshot_from_2025-01-05_11-52-34.png",
+    "can_be_contacted": null,
+    "can_data_be_shared": null,
+    "groups": [],
+    "user_permissions": [],
+    "professions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "services": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "websites": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "account.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$I5Sf1ami1OJ4sdLlqkPmi3$0ZAfFEjsqfx6TulcQUKnVbb6a0ObwyEUhM7k0jgk0Xw=",
+    "last_login": "2025-01-05T16:40:56.428Z",
+    "is_superuser": false,
+    "username": "TestUser",
+    "first_name": "",
+    "last_name": "Last Name",
+    "email": "test@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-03T17:43:13Z",
+    "introduction": "",
+    "photo": "",
+    "can_be_contacted": null,
+    "can_data_be_shared": null,
+    "groups": [],
+    "user_permissions": [],
+    "professions": [],
+    "services": [],
+    "websites": []
+  }
+},
+{
+  "model": "account.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$g4URLgQbjZdFZthVzF5NEh$7+fHc/0KVB3TtHTqau6woRA1liDYkZ4+XEheBgn13s4=",
+    "last_login": "2025-01-05T16:42:43Z",
+    "is_superuser": false,
+    "username": "JerryBean",
+    "first_name": "Jerry",
+    "last_name": "",
+    "email": "test@mail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-03T17:44:40Z",
+    "introduction": "<p>Update this</p>",
+    "photo": "images/users/JerryBean-4/Screenshot_from_2024-11-15_12-18-59.png",
+    "can_be_contacted": null,
+    "can_data_be_shared": null,
+    "groups": [],
+    "user_permissions": [],
+    "professions": [],
+    "services": [],
+    "websites": []
+  }
+},
+{
+  "model": "account.profession",
+  "pk": 1,
+  "fields": {
+    "name": "Django Developer",
+    "slug": "django-developer",
+    "publish": true,
+    "created": "2024-12-29T16:03:12.499Z",
+    "updated": "2024-12-29T16:03:12.499Z"
+  }
+},
+{
+  "model": "account.profession",
+  "pk": 2,
+  "fields": {
+    "name": "Python Developer",
+    "slug": "python-developer",
+    "publish": true,
+    "created": "2024-12-29T16:03:19.147Z",
+    "updated": "2024-12-29T16:03:19.147Z"
+  }
+},
+{
+  "model": "account.profession",
+  "pk": 3,
+  "fields": {
+    "name": "Freelancer",
+    "slug": "freelancer",
+    "publish": true,
+    "created": "2024-12-29T16:03:24.572Z",
+    "updated": "2024-12-29T16:03:24.572Z"
+  }
+},
+{
+  "model": "account.profession",
+  "pk": 4,
+  "fields": {
+    "name": "Consultant",
+    "slug": "consultant",
+    "publish": true,
+    "created": "2024-12-29T16:03:30.242Z",
+    "updated": "2024-12-29T16:03:30.242Z"
+  }
+},
+{
+  "model": "account.service",
+  "pk": 1,
+  "fields": {
+    "name": "Website Design",
+    "slug": "website-design",
+    "publish": true,
+    "created": "2024-12-29T16:04:13.603Z",
+    "updated": "2024-12-29T16:04:13.603Z"
+  }
+},
+{
+  "model": "account.service",
+  "pk": 2,
+  "fields": {
+    "name": "Website Development",
+    "slug": "website-development",
+    "publish": true,
+    "created": "2024-12-29T16:04:23.846Z",
+    "updated": "2024-12-29T16:04:23.846Z"
+  }
+},
+{
+  "model": "account.service",
+  "pk": 3,
+  "fields": {
+    "name": "Website Maintenance",
+    "slug": "website-maintenance",
+    "publish": true,
+    "created": "2024-12-29T16:05:06.676Z",
+    "updated": "2024-12-29T16:05:06.676Z"
+  }
+},
+{
+  "model": "account.service",
+  "pk": 4,
+  "fields": {
+    "name": "Blog Application Development",
+    "slug": "blog-application-development",
+    "publish": true,
+    "created": "2024-12-29T16:05:17.213Z",
+    "updated": "2024-12-29T16:05:17.213Z"
+  }
+},
+{
+  "model": "account.website",
+  "pk": 1,
+  "fields": {
+    "url": "https://www.dorothea-reher.com/",
+    "name": "Django Portfolio",
+    "slug": "django-portfolio",
+    "publish": true,
+    "created": "2024-12-29T16:05:51.946Z",
+    "updated": "2024-12-29T16:05:51.946Z"
+  }
+},
+{
+  "model": "account.website",
+  "pk": 2,
+  "fields": {
+    "url": "https://oc-lettings-site-latest-c1cc.onrender.com/",
+    "name": "Orange Country Lettings",
+    "slug": "orange-country-lettings",
+    "publish": true,
+    "created": "2024-12-29T16:06:25.561Z",
+    "updated": "2024-12-29T16:06:25.561Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-10-07T16:26:03.592Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Doridoro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-10-07T16:26:44.723Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Doridoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-10-07T16:29:49.729Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-10-07T16:30:46.331Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-10-07T16:34:31.420Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-10-07T16:34:35.964Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-10-09T14:23:22.595Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Comment by   on Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-11-08T11:07:22.493Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-11-08T11:08:02.675Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-11-08T11:09:18.700Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Django REST Framework (DRF) - ModelViewSets",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-11-08T11:10:04.165Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-11-08T11:10:57.557Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-11-08T11:54:01.596Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-11-08T11:56:38.519Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-11-08T11:57:32.419Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-11-08T11:59:19.932Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-11-08T12:00:09.293Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-11-08T12:01:28.463Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-11-08T12:02:12.173Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-11-08T12:05:37.366Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\", \"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-11-08T12:06:30.445Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-11-08T12:07:20.063Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-11-08T12:08:08.505Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-11-08T12:09:07.215Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-11-08T12:09:28.915Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-11-08T12:10:15.498Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-11-08T12:11:03.871Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-11-08T12:12:43.010Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-11-08T12:15:13.218Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-11-08T12:15:47.071Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-11-08T12:16:27.152Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-11-08T12:18:37.700Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-11-08T12:19:13.299Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-11-08T12:20:20.257Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-11-08T12:21:13.206Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-11-08T12:21:56.466Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-11-08T12:24:21.423Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-11-08T12:25:00.090Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-11-08T12:25:57.047Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-11-08T12:29:11.030Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Django REST Framework (DRF) - ModelViewSets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-11-08T12:30:30.799Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-11-18T12:51:30.863Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "dorispythonlifeinwords.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-11-26T09:55:46.452Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Django REST Framework (DRF) - ModelViewSets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\", \"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-11-26T10:40:22.785Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-11-26T10:40:35.574Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-11-26T10:41:00.905Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-11-26T10:41:12.668Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-11-26T10:41:16.041Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Django REST Framework (DRF) - ModelViewSets",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-11-26T10:41:21.739Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-12-28T19:26:48.541Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-12-28T19:29:53.760Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-12-28T19:33:00.825Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-12-28T19:37:12.255Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Django REST Framework (DRF) - ModelViewSets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-12-28T19:39:57.890Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-12-28T19:41:30.348Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-12-28T19:44:48.820Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-12-28T19:47:29.851Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-12-28T19:48:01.551Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-12-28T23:00:48.506Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-12-28T23:01:04.497Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-12-28T23:01:13.291Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-12-28T23:01:19.263Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-12-28T23:01:25.762Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Django REST Framework (DRF) - ModelViewSets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2024-12-28T23:01:31.493Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2024-12-29T11:57:53.234Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Add URL pattern to access the \"/\" home page",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2024-12-29T11:59:34.688Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Add URL pattern to access the \"/\" home page",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2024-12-29T12:04:14.808Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Add URL pattern to access the \"/\" home page",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2024-12-29T12:05:14.518Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Add URL pattern to access the \"/\" home page",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2024-12-29T12:05:56.284Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Add URL pattern to access the \"/\" home page",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2024-12-29T12:06:13.007Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2024-12-29T12:08:45.846Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2024-12-29T12:16:43.730Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Django REST Framework (DRF) - permissions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2024-12-29T12:23:09.650Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Django REST Framework (DRF) - ModelViewSets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2024-12-29T12:26:17.414Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2024-12-29T12:28:23.579Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "How to get the `verbose_name` of an attribute of a model",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2024-12-29T12:30:42.919Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Why do I need to store environment variables in a separate file when going to production?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2024-12-29T12:34:10.631Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "What is gunicorn?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2024-12-29T12:47:19.143Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "URL patterns",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2024-12-29T12:47:36.975Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Add URL pattern to access the \"/\" home page",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2024-12-29T14:35:32.093Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2024-12-29T14:51:42.172Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Introduction\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2024-12-29T16:03:12.501Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Django Developer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2024-12-29T16:03:19.148Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Python Developer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2024-12-29T16:03:24.574Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Freelancer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2024-12-29T16:03:30.244Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Consultant",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2024-12-29T16:03:49.312Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Professions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2024-12-29T16:04:13.605Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Website Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2024-12-29T16:04:23.849Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Website Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2024-12-29T16:05:06.678Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Website Maintenance",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2024-12-29T16:05:17.214Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "Blog Application Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2024-12-29T16:05:51.948Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Django Portfolio",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2024-12-29T16:06:25.563Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Orange Country Lettings",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2024-12-29T16:07:20.103Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Services\", \"Websites\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2024-12-29T17:45:59.521Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Introduction\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-01-03T16:30:01.777Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-01-04T19:04:46.168Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-01-04T22:40:34.238Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "http://127.0.0.1:8000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-01-04T22:42:16.050Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "dorispythonlifeinwords.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-01-04T22:44:25.283Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "127.0.0.1:8000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-01-05T16:40:29.307Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "TestUser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-01-05T22:11:12.595Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "DoriDoro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Introduction\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-01-05T22:12:23.062Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "JerryBean",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Introduction\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-01-08T10:31:10.481Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Test title",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Body\", \"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-01-13T18:49:49.843Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Test title",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0kkce015j4abyjm7sssagw4ud8s2nuf8",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEMjxZcuvcbyAwMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxZnocXpdyNMD247yHdst1mmua3LRHJX5EG7vM6Zn5fD_Tuo2Ou3TgjWWdCGDTvQnDy5AsPo2QXvPRZLiVRRhFkRDwFIMZpiIRkXYGTx_gDlcDgm:1tU7Je:6tYSPLWLQnYIBBx3HEyr6hy9W3ETps8q9_OUB0TpVoo",
+    "expire_date": "2025-01-18T16:47:58.148Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3kiefrxw3zoscg0z1d6xdvtexrpzv0hr",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1tD1D2:U_VMqSgor21nz-pE7EdMhp3-w3MJLp8yV8sbhhw1kl4",
+    "expire_date": "2024-12-02T12:50:28.473Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5i8xftwx0rd1txork51dg167tyg1uyz2",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1tXS8x:T_-IN_esowHr-DueUBO1LddkrRTrDHEziBcGH4IhwfQ",
+    "expire_date": "2025-01-27T21:38:43.736Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "92u2nsezogqzxkwcok89kywidm2ahzcj",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1sxqWC:abMkY9aQ2EJePnm05CAA1GrNu31mKT28WhoXloku0jw",
+    "expire_date": "2024-10-21T16:23:32.996Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a8syu60yxytl14ww8otn3wdzxaunzlxw",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1syXaI:EvQGfEzaubK1X1jzi2ogWeXzeyGhXWtkH7biFHspPQM",
+    "expire_date": "2024-10-23T14:22:38.196Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dzdd81jken7n81cdu3vefthtiatdax8z",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAURP-FtSFQiqJL934DudyHVA0kpV0Z_12adKGbWcycM28VYV1yXBvPcSJ1UYM6_HYJ8MllG-gB5V411rLMU9Ibove16Vslfl139u8gQ8vdZivIiXqAH60bwQdOnkQCwlmCOLAnMMaEY5DBGkcYgJCJfZeMderzBS9yOaQ:1tU99X:465B--bUhmH0Th-5xr04t3ntcHjVWyrzQYEuF2IE8eU",
+    "expire_date": "2025-01-18T18:45:39.838Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hkraitqtxcts9r6h596mtfvi51o724xm",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1tXPVO:YwDH30jEP9kMf3L6p0CfjW3Fd84P6pkb1kqChT3i-gg",
+    "expire_date": "2025-01-27T18:49:42.070Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hqq7jti9kp5lzeom2vcpheh3yiycgbob",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2RDoUnA9evcNZIFFqgaS0p6MfzckPeh1ZjJv4Wnfit87r35J4iImcfplgeKT6xDpQfXeZGx1W5cgRyIP2-WtJX5dj_ZvUKiXsdUZ1IxJY9SIPJ8ZILLNQIgqgTMhAGSdrWOIBtgGzMEq0I4momzE5wvVKzfZ:1tWz5M:TTOb2EuW-94m95MFH2F7Jw-FOOg5cdUuHEqguJbLBDI",
+    "expire_date": "2025-01-26T14:37:04.375Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "knxyvz03rmq7vu73w2mr34uvmsrop265",
+  "fields": {
+    "session_data": "eyJfcGFzc3dvcmRfcmVzZXRfdG9rZW4iOiJjajRvazctZDM1MGM3Yzg1MWEzNmMzMDZjMDdhMTcxMzYyZDMwMTcifQ:1tUDMP:6e5Dsk6UDjvYpW8Ty2Y4jVZ2jBYedysxVCqdSnC8JEo",
+    "expire_date": "2025-01-18T23:15:13.717Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mydzu4ug79mjdw8dvo90ks6hsv00b8xd",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1tAtan:Tu4DjW5CmfryRSbAOuvfYw74PaVQyIYof8Ij-k6lP4Y",
+    "expire_date": "2024-11-26T16:18:13.268Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v4oknx0a25jfiu55230cgcvquhnguf94",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1tFsHe:5HHYI33MfAD0JJ7aclgzmSWkKhGubywXThP1meO7XnY",
+    "expire_date": "2024-12-10T09:55:02.318Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v5x83tlornlo3xbvzde5jikqkn0cozmu",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgyDAu3XsGMjBUqoYmpV0Z725JutDl--_lv0WgbS1ha3kJE4uLMOL0u0VKz1y74AfV-yzTXNdlirIn8rBN3mbOr-vR_h0UaqXfYk5sGJQiipbdOEYP4DxSBMXDsDMom3Y2miwiY_I2aY1RK3fOID5f_KQ4Dw:1tU9Ax:gLYjFNbbY4ySh0sWBjTH0VxYkPu4cT_rVUSdFZaI7mA",
+    "expire_date": "2025-01-18T18:47:07.467Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vm334kv0vjl8f0x8ynxnthsyqv3m9clj",
+  "fields": {
+    "session_data": "eyJfcGFzc3dvcmRfcmVzZXRfdG9rZW4iOiJjajRtZXItNzhmNzFlYzdjZTg2YTE5NDM5NTIzMDNiYTBlMmE1ZGEifQ:1tUCdA:KTVtfL-qk_ac4m9Ocg6ihM5UIikX5psSPty7lA2lPtI",
+    "expire_date": "2025-01-18T22:28:28.221Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wijbi18az75y3j4bnybl5179rxl45v45",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEMjxZcuvcbyAwMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxZnocXpdyNMD247yHdst1mmua3LRHJX5EG7vM6Zn5fD_Tuo2Ou3TgjWWdCGDTvQnDy5AsPo2QXvPRZLiVRRhFkRDwFIMZpiIRkXYGTx_gDlcDgm:1tU967:g9xI8kidgvh941J72dpLq-t3AzWzOQ2z20ZuQ9CCMaE",
+    "expire_date": "2025-01-18T18:42:07.701Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wtfb060u0t1edfz68zigg356mk4u4gdi",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1suAbe:lBfg8lDyhm3abDywu8AOfquRHSFr9lo5WsY-aIHaOQ0",
+    "expire_date": "2024-10-11T13:01:58.539Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x3fnl48qdx2hu8ci5p37sijle4xml9g7",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBmSgt16b5nIAwDUjWQlHZlvLsh6UK3_73338L5Y8_uaHFzK4urAHH53ciHZywd8MOXe5Whln1bSXZFnrTJpXJ83U737yD7lns9IHpApFkxY9KaNQQaGWcb1UToYwhGW5UssZmGBMCAARRpsCOaKD5f47Y3sg:1t9MjG:cM5JFjC-e0t5OsXrU7qPXCTy6xzPKSGXJK5yDvv1P7I",
+    "expire_date": "2024-11-22T11:00:38.749Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 2,
+  "fields": {
+    "domain": "127.0.0.1:8000",
+    "name": "localhost"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "How to get the `verbose_name` of an attribute of a model",
+    "slug": "how-to-get-the-verbose_name-of-an-attribute-of-a-model",
+    "body": "Sometimes you need the <code>verbose_name</code> of an attribute of a model in a Django view. Perhaps you want to display the <code>verbose_name</code> in a template, or you want to create an entry (LogEntry), or whatever reason you may have.\r\n\r\nYou can't access the <code>verbose_name</code> in a Django template, so you need to retrieve the <code>verbose_name</code> in your view or create a template tag. The <code>verbose_name</code> can be used for logging, for sending messages, or for any other purpose.\r\n\r\n<hr>\r\n\r\nI am going to show you how to get the <code>verbose_name</code> of the model attribute. In my example, I get the <code>verbose_name</code> of the model attribute when a user has filled in a form (UserProfileForm) and the form is valid.\r\n\r\n<pre class=\"language-python\"><code>\r\n# views.py\r\n\r\nfrom django.views.generic.edit import UpdateView\r\nfrom django.core.exceptions import FieldDoesNotExist\r\nfrom django.urls import reverse_lazy\r\nfrom .models import UserProfile\r\nfrom .forms import UserProfileForm\r\n\r\nclass UserProfileUpdateView(UpdateView):\r\n    model = UserProfile\r\n    form_class = UserProfileForm\r\n    template_name = 'userprofile_form.html'\r\n    success_url = reverse_lazy('profile')\r\n\r\n    def form_valid(self, form):\r\n        description = {}\r\n\r\n        if form.has_changed():\r\n            for field in form.changed_data:\r\n                try:\r\n                    name = self.object._meta.get_field(field).verbose_name\r\n                except FieldDoesNotExist:\r\n                    name = form.fields[field].label\r\n\r\n                description[name.capitalize()] = form.cleaned_data[field]\r\n\r\n        print(\"Changed fields and new values:\", description)\r\n\r\n        return super().form_valid(form)\r\n</code></pre>\r\n\r\n<strong>Let's say the user has changed the <code>first_name</code> and <code>last_name</code> in the <code>UserProfileForm</code>.</strong>\r\n\r\n<h4><a href=\"https://dev.to/doridoro/how-to-get-the-verbosename-of-an-attribute-of-a-model-12d1#what-happens-here-is\" name=\"what-happens-here-is\"> </a> What happens here, is:</h4>\r\n<ul>\r\n<li>we call the <code>form_valid()</code> method when the form is valid.</li>\r\n<li><code>form.has_changed()</code>: To determine whether the field value(s) has changed from its initial value, use the <code>has_changed()</code> method. It returns <code>True</code> or <code>False</code>.</li>\r\n<li><code>form.changed_data</code>: The <code>changed_data</code> attribute returns a list of the names of the fields whose values in the bound data of the form (usually <code>request.POST</code>) are different from what was provided in the initial. It returns an empty list if no data differs.</li>\r\n</ul>\r\n\r\n<pre class=\"language-python\"><code>\r\n&gt;&gt;&gt; form.changed_data\r\n['first_name', 'last_name']\r\n</code></pre>\r\n\r\n<ul>\r\n<li><code>name = self.object._meta.get_field(field).verbose_name</code>: The <code>name</code> variable will hold the <code>verbose_name</code> of the modified attribute in UserModel. In our example, either <code>first_name</code> or <code>last_name</code>. This line is where the magic happens.\r\n<ul>\r\n<li><code>self.object</code>: This object is the object that is updated</li>\r\n<li><code>._meta</code>: The <code>_meta</code> is an API that allows other parts of the system such as lookups, queries, forms and the admin to understand the capabilities of each model.</li>\r\n<li><code>.get_field(field_name)</code>: It returns the field instance of the given field_name.</li>\r\n<li><code>.verbose_name</code>: The <code>verbose_name</code> method returns the human readable name of the object/attribute stored in the model.</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n\r\n<strong>Summary:</strong>\r\n\r\nWe store the <code>verbose_name</code> in the variable: <code>name</code>.\r\nWe start with <code>self.object</code>, which is the object we want to modify. With <code>._meta</code> we have access to the metadata of the model. The metadata contains everything that is not a field in the model. With the method <code>get_field()</code> we get the single field of the model. The <code>verbose_name</code> is stored in the metadata.",
+    "image": "",
+    "publish": "2024-10-07T16:27:19Z",
+    "created": "2024-10-07T16:29:49.727Z",
+    "updated": "2024-12-29T12:28:23.569Z",
+    "status": "PB",
+    "author": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "Why do I need to store environment variables in a separate file when going to production?",
+    "slug": "why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production",
+    "body": "Storing <strong>environment variables</strong> in a separate file for production is an essential practice for maintaining security, flexibility, and ease of deployment. Here's why it's important:\r\n\r\n<h3><a href=\"https://dev.to/doridoro/why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production-1g6j#1-security\" name=\"1-security\"> </a> 1. <strong>Security</strong>:</h3>\r\n<ul>\r\n<li><strong>Sensitive Information</strong>: Environment variables often contain sensitive information such as database credentials, API keys, secret tokens, and other configuration settings. Storing these directly in the source code (e.g., <code>settings.py</code> in Django) makes them visible to anyone who has access to your codebase, which poses a serious security risk.</li>\r\n<li><strong>Public Repositories</strong>: If you're using version control systems like Git and hosting your code on platforms like GitHub, including environment variables in your code can lead to accidental exposure of sensitive information. Storing them in a separate file ensures they don't end up in your version control.</li>\r\n</ul>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production-1g6j#2-separation-of-concerns\" name=\"2-separation-of-concerns\"> </a> 2. <strong>Separation of Concerns</strong>:</h3>\r\n<ul>\r\n<li><strong>Code vs. Configuration</strong>: By keeping environment variables in a separate file, you adhere to the principle of <strong>separation of concerns</strong>. Your codebase remains clean, and your configuration (which can vary between environments like development, testing, and production) is managed externally. This makes it easier to maintain and modify.</li>\r\n<li><strong>Environment-Specific Configurations</strong>: Different environments (development, testing, staging, production) often have different configurations. For example, you might have different database URLs, API keys, or debug settings for each environment. By storing environment-specific variables separately, you can easily switch configurations without modifying your codebase.</li>\r\n</ul>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production-1g6j#3-ease-of-deployment\" name=\"3-ease-of-deployment\"> </a> 3. <strong>Ease of Deployment</strong>:</h3>\r\n<ul>\r\n<li><strong>Consistency Across Environments</strong>: When you deploy to production, you want your app to run with the appropriate configuration for that environment. Using environment variables allows you to define environment-specific settings without hardcoding them into the app. This ensures consistency and minimizes errors when moving between development and production environments.</li>\r\n<li><strong>Portability</strong>: Environment variables make your application more portable. You can deploy it in different environments (local machine, cloud services, containers) without changing the code. The only thing you need to change is the environment configuration file, which contains the environment-specific settings.</li>\r\n</ul>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production-1g6j#4-avoid-hardcoding-values\" name=\"4-avoid-hardcoding-values\"> </a> 4. <strong>Avoid Hardcoding Values</strong>:</h3>\r\n<ul>\r\n<li><strong>Flexibility</strong>: Hardcoding values such as API keys or database credentials in your code can make future changes difficult and error-prone. By using environment variables, you can easily change these values (e.g., switching databases or API providers) without having to modify and redeploy the entire codebase.</li>\r\n<li><strong>Version Independence</strong>: Environment variables allow different versions of your application to work with different settings. For instance, staging and production environments can use different databases, API keys, or logging levels by simply setting different environment variables, without changing any code.</li>\r\n</ul>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production-1g6j#5-containerization-and-cloud-deployments\" name=\"5-containerization-and-cloud-deployments\"> </a> 5. <strong>Containerization and Cloud Deployments</strong>:</h3>\r\n<ul>\r\n<li><strong>Docker and Kubernetes</strong>: In modern containerized environments like Docker and Kubernetes, environment variables are the preferred way to pass configuration to your application. Containers are meant to be stateless and immutable, so storing environment-specific data in files outside the container (e.g., <code>.env</code> file or environment variables passed during deployment) makes it easy to swap in new configurations without changing the container image.</li>\r\n<li><strong>Cloud Platforms</strong>: Many cloud platforms (e.g., AWS, Heroku, Google Cloud) encourage the use of environment variables for managing secrets and configuration settings. Cloud services often provide native ways to manage environment variables securely, such as AWS Secrets Manager or Heroku&rsquo;s Config Vars.</li>\r\n</ul>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production-1g6j#how-its-typically-done\" name=\"how-its-typically-done\"> </a> How It&rsquo;s Typically Done:</h3>\r\n\r\n<strong>1. Environment Files</strong> (<code>.env</code>):\r\n<ul>\r\n<li>A common practice is to store environment variables in a <strong><code>.env</code> file</strong>. The file typically contains key-value pairs, where each variable is defined like this:</li>\r\n</ul>\r\n\r\n<pre class=\"language-python\"><code> \r\n# .env\r\n\r\nDATABASE_URL=postgres://user:password@localhost/dbname\r\n SECRET_KEY=my_super_secret_key\r\n DEBUG=False\r\n</code></pre>\r\n\r\n<ul>\r\n<li>In production, the <code>.env</code> file is loaded by the application (usually with tools like <strong><code>python-decouple</code></strong> or <strong><code>dotenv</code></strong> in Python) or directly by the operating system.</li>\r\n</ul>\r\n\r\n<strong>2. Loading Environment Variables</strong>:\r\n<ul>\r\n<li>In Django, you can use packages like <strong><code>python-decouple</code></strong> or <strong><code>django-environ</code></strong> to load environment variables from a <code>.env</code> file and use them in your <code>settings.py</code>:</li>\r\n</ul>\r\n\r\n<pre class=\"language-python\"><code> \r\n# project/settings.py\r\n\r\nfrom decouple import config\r\n\r\n SECRET_KEY = config('SECRET_KEY')\r\n DEBUG = config('DEBUG', default=False, cast=bool)\r\n DATABASE_URL = config('DATABASE_URL')\r\n</code></pre>\r\n\r\n<ul>\r\n<li>This setup ensures that the sensitive data is kept outside the codebase and can be adjusted for different environments.</li>\r\n</ul>\r\n<p><strong>3. Storing Environment Variables Securely</strong>:</p>\r\n<ul>\r\n<li>When deploying to production, the <code>.env</code> file should be placed on the server and kept out of version control (e.g., by adding <code>.env</code> to <code>.gitignore</code>).</li>\r\n<li>Alternatively, many platforms (such as AWS, Heroku, and Docker) allow you to define environment variables directly through their interfaces, bypassing the need for a <code>.env</code> file.</li>\r\n</ul>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/why-do-i-need-to-store-environment-variables-in-a-separate-file-when-going-to-production-1g6j#summary\" name=\"summary\"> </a> Summary:</h3>\r\n<ul>\r\n<li><strong>Security</strong>: Keeping sensitive data like API keys and database credentials out of the source code.</li>\r\n<li><strong>Separation</strong>: Separates configuration from code, making it easier to manage different environments.</li>\r\n<li><strong>Deployment Flexibility</strong>: Allows for easy and flexible configuration changes without modifying code.</li>\r\n<li><strong>Scalability</strong>: Works seamlessly in cloud environments and containerized setups, which rely heavily on environment variables for configuration.</li>\r\n</ul>\r\n\r\nUsing environment variables stored in a separate file is a best practice for keeping your application secure, maintainable, and flexible in production.",
+    "image": "",
+    "publish": "2024-09-27T16:30:08Z",
+    "created": "2024-10-07T16:30:46.330Z",
+    "updated": "2024-12-29T12:30:42.911Z",
+    "status": "PB",
+    "author": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "What is the difference between the template filter: `|linebreaks` and `|linebreaksbr` in Django Template?",
+    "slug": "what-is-the-difference-between-the-template-filter-linebreaks-and-linebreaksbr-in-django-template",
+    "body": "The Django template filters: <code>linebreaks</code> and <code>linebreaksbr</code> both handle the conversion of line breaks to plain text. Although they behave differently in terms of how the HTML is generated.\r\n\r\n<h3><a href=\"https://dev.to/doridoro/django-template-filters-linebreaks-and-linebreaksbr-49pm#1-raw-linebreaks-endraw-\" name=\"1-raw-linebreaks-endraw-\"> </a> 1. <strong><code>linebreaks</code></strong>:</h3>\r\n<ul>\r\n<li>Converts the plain text string into a HTML paragraph <code>&lt;p&gt;</code> when there are no newline characters (<code>\\n</code>) found in the plain text.</li>\r\n<li>Converts the newline character (<code>\\n</code>) in a plain text string into HTML <code>&lt;p&gt;</code> (paragraph) and <code>&lt;br&gt;</code> (line break) tags.</li>\r\n<li>Each block of text separated by two or more newlines becomes a <code>&lt;p&gt;</code> tag, and single newlines within that block are converted to <code>&lt;br&gt;</code> tags.</li>\r\n</ul>\r\n\r\n<strong>Example</strong>:\r\n\r\n<pre class=\"language-markup\"><code>\r\n{% with text=\"This is line one.\\nThis is line two.\\n\\nThis is a new paragraph.\" %}\r\n  {{ text|linebreaks }}\r\n{% endwith %}\r\n</code></pre>\r\n\r\n<strong>Output</strong>:\r\n<pre class=\"language-markup\"><code>\r\n&lt;p&gt;This is line one.&lt;br&gt;This is line two.&lt;/p&gt;\r\n&lt;p&gt;This is a new paragraph.&lt;/p&gt;\r\n</code></pre>\r\n\r\n<h3>2. <strong><code>linebreaksbr</code></strong>:</h3>\r\n<ul>\r\n<li>Converts <strong>every</strong> newline (<code>\\n</code>) into an HTML <code>&lt;br&gt;</code> tag, without creating paragraphs (<code>&lt;p&gt;</code>). And keeping all text in the same flow but respecting line breaks.</li>\r\n</ul>\r\n\r\n<strong>Example</strong>:\r\n\r\n<pre class=\"language-markup\"><code>\r\n{% with text=\"This is line one.\\nThis is line two.\\n\\nThis is a new paragraph.\" %}\r\n  {{ text|linebreaksbr }}\r\n{% endwith %}\r\n</code></pre>\r\n\r\n<strong>Output</strong>:\r\n\r\n<pre class=\"language-markup\"><code>\r\nThis is line one.&lt;br&gt;This is line two.&lt;br&gt;&lt;br&gt;This is a new paragraph.\r\n</code></pre>\r\n\r\n<h3>Summary:</h3>\r\nUse <code>linebreaks</code> when you want paragraphs and <code>linebreaksbr</code> when you want simple line breaks without creating paragraphs. As simple as that!",
+    "image": "",
+    "publish": "2024-10-17T11:01:30Z",
+    "created": "2024-11-08T11:07:22.483Z",
+    "updated": "2024-12-29T12:26:17.407Z",
+    "status": "PB",
+    "author": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "Django REST Framework (DRF) - ModelViewSets",
+    "slug": "django-rest-framework-drf-modelviewsets",
+    "body": "A <code>ModelViewSet</code> in Django REST Framework (DRF) is a powerful view class that provides a set of common actions for working with models through an API. It combines the functionality of Django's generic views and viewsets, enabling you to quickly build CRUD (Create, Read, Update, Delete) APIs for your models without needing to manually define each individual action.\r\n\r\n<h3><a href=\"https://dev.to/doridoro/django-rest-framework-drf-modelviewsets-2ich#key-features-of-modelviewset\" name=\"key-features-of-modelviewset\"> </a> Key features of ModelViewSet:</h3>\r\n\r\n<a name=\"HTTP_method\"></a>\r\n<ul>\r\n<li><strong>Pre-built CRUD actions:</strong> It automatically provides the following actions:\r\n<ul>\r\n<li><code>list</code> - <code>GET</code>: Retrieves multiple objects of model instances.</li>\r\n<li><code>retrieve</code> - <code>GET</code>: Retrieves a single model instance.</li>\r\n<li><code>create</code> - <code>POST</code>: Creates a new model instance.</li>\r\n<li><code>update</code> - <code>PUT</code>: Updates an existing model instance.</li>\r\n<li><code>partial_update</code> - <code>PATCH</code>: Partially updates an existing model instance.</li>\r\n<li><code>destroy</code> - <code>DELETE</code>: Deletes a model instance.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<strong>Automatic routing:</strong> When you use <code>ModelViewSet</code> with DRF's routers, URL routes are automatically generated for these actions.\r\n</li>\r\n<li>\r\n<strong>Flexibility:</strong> You can easily customize or extend the default behavior by overriding methods or adding custom actions.\r\n</li>\r\n</ul>\r\nThe <code>queryset</code> and <code>serializer_class</code> attributes are essential for using a ModelViewSet.\r\n<strong>Here is a simple example of a <code>ModelViewSet</code> from the DRF documentation:</strong>\r\n\r\n<pre class=\"language-python\"><code>\r\n# app/views.py\r\n\r\nclass AccountViewSet(viewsets.ModelViewSet):\r\n    queryset = Account.objects.all()\r\n    serializer_class = AccountSerializer\r\n    permission_classes = [IsAccountAdminOrReadOnly]\r\n</code></pre>\r\n\r\n<hr>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/django-rest-framework-drf-modelviewsets-2ich#how-can-you-customize-your-raw-modelviewset-endraw-and-what-do-you-need-to-be-aware-of\" name=\"how-can-you-customize-your-raw-modelviewset-endraw-and-what-do-you-need-to-be-aware-of\"> </a> How can you customize your <code>ModelViewSet</code> and what do you need to be aware of?</h3>\r\n\r\nYou can use any of the standard attributes or method overrides that are provided by the <code>GenericAPIView</code>.\r\nHere is a list of some of the key ones:\r\n\r\n<h4><a href=\"https://dev.to/doridoro/django-rest-framework-drf-modelviewsets-2ich#standard-attributes\" name=\"standard-attributes\"> </a> <em>Standard Attributes:</em></h4>\r\n<ol>\r\n<li><strong>queryset</strong>: The queryset that should be used for returning objects from this view.</li>\r\n<li><strong>serializer_class</strong>: Specifies the serializer class to use for validating and deserializing input, and for serializing output.</li>\r\n<li><strong>lookup_field</strong>: The model field that should be used to lookup objects. Defaults to 'pk'.</li>\r\n<li><strong>pagination_class</strong>: Pagination class to be used to paginate the list of objects.</li>\r\n</ol>\r\n\r\n<h4><a href=\"https://dev.to/doridoro/django-rest-framework-drf-modelviewsets-2ich#standard-methods\" name=\"standard-methods\"> </a> <em>Standard Methods:</em></h4>\r\n<ol>\r\n<li><strong>get_queryset()</strong>: Returns the queryset that will be used to retrieve objects.</li>\r\n<li><strong>get_serializer_class()</strong>: Returns the class to use for the serializer.</li>\r\n<li><strong>get_serializer()</strong>: Returns the serializer instance that should be used for validating and deserializing input.</li>\r\n<li><strong>get_object()</strong>: Returns the object that this view is displaying.</li>\r\n<li><strong>get_serializer_context()</strong>: Can be overridden to change the context dictionary passed to the serializer instance.</li>\r\n<li><strong>filter_queryset(queryset)</strong>: Given a queryset, filter it based on the view&rsquo;s filtering configuration.</li>\r\n<li><strong>paginate_queryset(queryset)</strong>: Paginate the given queryset, and return a page object.</li>\r\n<li><strong>get_pagination_response(data)</strong>: Return a paginated style response for the given output data.</li>\r\n<li><strong>get_view_name()</strong>: Returns the view name that should be used as the title of the view.</li>\r\n<li><strong>get_view_description()</strong>: Returns the description to be used by browsable APIs and other descriptions.</li>\r\n<li><strong>get_renderer_context()</strong>: Creates a context dictionary for rendering.</li>\r\n</ol>\r\n\r\n<hr>\r\n\r\n<strong>1.) The <code>get_queryset()</code> method is overridden by the DRF documentation in this example.</strong>\r\n\r\n<pre class=\"language-python\"><code>\r\n# app/views.py\r\n\r\nclass AccountViewSet(viewsets.ModelViewSet):\r\n    serializer_class = AccountSerializer\r\n    permission_classes = [IsAccountAdminOrReadOnly]\r\n\r\n    def get_queryset(self):\r\n        return self.request.user.accounts.all()\r\n</code></pre>\r\n\r\nThe DRF documentation shows this example because if you override the <code>get_queryset()</code> method, you need to be aware that the <code>basename</code> in the router registry has to be set to a value. Normally DRF will automatically create the <code>basename</code> and set the value. It takes the values from the model name and creates the <code>basename</code> with the model name in lower case. In this case, you must set the <code>basename</code> to a value.\r\n\r\n<pre class=\"language-python\"><code>\r\n# project/urls.py\r\n\r\n   from rest_framework import routers\r\n\r\n   router = routers.SimpleRouter()\r\n   router.register(r'accounts', AccountViewSet, basename='account')\r\n   urlpatterns = router.urls\r\n</code></pre>\r\n\r\nIn the above example:\r\n\r\n<pre class=\"language-python\"><code>\r\n\r\n# app/views.py\r\n\r\nclass AccountViewSet(viewsets.ModelViewSet):\r\n    queryset = Account.objects.all()\r\n    serializer_class = AccountSerializer\r\n    permission_classes = [IsAccountAdminOrReadOnly]\r\n</code></pre>\r\n\r\nthe <code>basename</code> is automatically set to <code>basename='account'</code>. It takes the model name of the <code>queryset</code> attribute <code>Account</code> and create a lower case name.\r\n\r\n<hr>\r\n\r\n<strong>2.) Having multiple serializer classes:</strong>\r\nUsing a mixin is one way of generating multiple serializer classes. Why do I want to create multiple serializers?\r\n<ol>\r\n<li><strong>Separation of Concerns</strong>: Different parts of an application may require different subsets of data. Multiple serializers allow you to fetch only the necessary data for each context, separating concerns.</li>\r\n<li><strong>Efficient Data Handling</strong>: By defining serializers specifically tailored to different API endpoints or logic, you can optimize data serialization/deserialization, improving performance and efficiency.</li>\r\n<li><strong>Security</strong>: Having different serializers lets you expose only the necessary fields to users who do not need full access to the data. This minimizes exposure to sensitive information.</li>\r\n<li><strong>Flexibility</strong>: Some API endpoints might need to validate data differently or handle it in a specific manner. Custom serializers provide the flexibility to add custom validation logic as needed.</li>\r\n<li><strong>Maintainability</strong>: Breaking down complex functionalities into simpler, smaller serializers makes the codebase easier to maintain. Each serializer handles a well-defined responsibility.</li>\r\n</ol>\r\n\r\n<strong>The serializer mixin can look like this:</strong>\r\n\r\n<pre class=\"language-python\"><code>\r\n# mixins.py\r\n\r\nclass SerializerClassMixin:\r\n    serializer_create_class = None\r\n    serializer_detail_class = None\r\n    serializer_list_class = None\r\n\r\n    def get_serializer_class(self):\r\n        if self.action == \"create\":\r\n            return self.serializer_create_class\r\n        elif self.action == \"retrieve\":\r\n            return self.serializer_detail_class\r\n        elif self.action == \"list\":\r\n            return self.serializer_list_class\r\n        return super().get_serializer_class()\r\n</code></pre>\r\n\r\nIn a Django REST framework project, the <code>self.action</code> is an attribute that represents the current action being performed by a viewset. It is automatically set by Django REST framework based on the <a href=\"https://dev.to/doridoro/django-rest-framework-drf-modelviewsets-2ich#HTTP_method\">HTTP method</a> of the request and the viewset's configuration.\r\n\r\nThis Mixin is designed to allow different serializers to be used in different situations within a single viewset:\r\n<ul>\r\n<li>\r\n<p><strong>serializer_create_class:</strong> Used when the create action is being performed.</p>\r\n</li>\r\n<li>\r\n<p><strong>serializer_detail_class:</strong> Used for the retrieve action, accessing a single instance.</p>\r\n</li>\r\n<li>\r\n<p><strong>serializer_list_class:</strong> Used when listing a collection of instances with the list action.</p>\r\n</li>\r\n</ul>\r\n\r\nBy using <code>self.action</code>, the <code>get_serializer_class()</code> method dynamically chooses which serializer class to use based on the current action. This can be very helpful in a scenario where you need different serializers for different operations on the same resource.\r\n\r\nHere is an example of a view:\r\n\r\n<pre class=\"language-python\"><code>\r\n# views.py\r\n\r\nfrom rest_framework.permissions import IsAuthenticated\r\nfrom rest_framework.viewsets import ModelViewSet\r\n\r\nfrom api.models.project import Project\r\nfrom api.permissions import IsAuthor\r\nfrom api.serializers.project import (\r\n    ProjectCreateSerializer,\r\n    ProjectListSerializer,\r\n    ProjectDetailSerializer,\r\n)\r\n\r\nfrom api.views.mixins import SerializerClassMixin\r\n\r\n\r\nclass ProjectViewSet(SerializerClassMixin, ModelViewSet):\r\n    serializer_class = ProjectCreateSerializer\r\n    serializer_create_class = ProjectCreateSerializer\r\n    serializer_detail_class = ProjectDetailSerializer\r\n    serializer_list_class = ProjectListSerializer\r\n    permission_classes = [IsAuthor, IsAuthenticated]\r\n\r\n    _project = None\r\n\r\n    @property\r\n    def project(self):\r\n        if self._project is None:\r\n            self._project = Project.objects.filter(contributors=self.request.user)\r\n\r\n        return self._project\r\n\r\n    def get_queryset(self):\r\n        # use order_by to avoid the warning for the pagination\r\n        return self.project.order_by(\"created_time\")\r\n\r\n    def perform_create(self, serializer):\r\n        # save the author as author and as contributor (request.user)\r\n        serializer.save(author=self.request.user, contributors=[self.request.user])\r\n</code></pre>\r\n\r\nIn the <code>ProjectViewSet</code> we integrate the serializer mixin (<code>SerializerClassMixin</code>) to be able to use all the different serializers to list, create and display a detailed serializer.\r\nWe need to specify the <code>basename</code> in the URL pattern because we have overridden the <code>get_queryset()</code> method.\r\n\r\n<pre class=\"language-python\"><code>\r\n# urls.py\r\n\r\nfrom rest_framework_nested import routers\r\n\r\nfrom api.views.project import ProjectViewSet\r\n\r\napp_name = \"api\"\r\n\r\nrouter = routers.DefaultRouter()\r\nrouter.register(r\"projects\", ProjectViewSet, basename=\"project\")\r\n</code></pre>\r\n\r\n<strong>Finally, there are the different serializers:</strong>\r\n\r\n<pre class=\"language-python\"><code>\r\n# serializers.py\r\n\r\nfrom rest_framework import serializers\r\n\r\nfrom api.models.project import Project\r\n\r\n\r\nclass ProjectCreateSerializer(serializers.ModelSerializer):\r\n    class Meta:\r\n        model = Project\r\n        fields = [\r\n            \"id\",\r\n            \"name\",\r\n            \"description\",\r\n            \"project_type\",\r\n        ]\r\n\r\n    def validate(self, attrs):\r\n        if (\r\n            self.context[\"view\"]\r\n            .project.filter(name=attrs[\"name\"], project_type=attrs[\"project_type\"])\r\n            .exists()\r\n        ):\r\n            raise serializers.ValidationError(\"Attention! This project exists already.\")\r\n        return attrs\r\n\r\n\r\nclass ProjectListSerializer(serializers.ModelSerializer):\r\n    class Meta:\r\n        model = Project\r\n        fields = [\r\n            \"id\",\r\n            \"name\",\r\n            \"author\",\r\n            \"contributors\",\r\n        ]\r\n\r\n\r\nclass ProjectDetailSerializer(serializers.ModelSerializer):\r\n    class Meta:\r\n        model = Project\r\n        fields = [\r\n            \"id\",\r\n            \"created_time\",\r\n            \"name\",\r\n            \"description\",\r\n            \"project_type\",\r\n            \"author\",\r\n            \"contributors\",\r\n        ]\r\n</code></pre>",
+    "image": "",
+    "publish": "2024-10-24T11:08:21Z",
+    "created": "2024-11-08T11:09:18.689Z",
+    "updated": "2024-12-29T12:23:09.634Z",
+    "status": "PB",
+    "author": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Django REST Framework (DRF) - permissions",
+    "slug": "django-rest-framework-drf-permissions",
+    "body": "In Django REST Framework, permissions are a crucial part of the authentication and authorization mechanism. They determine the level of access that users have to various resources in your API, ensuring that sensitive information is protected and only accessible to authorized users.\r\n\r\nPermissions can be applied at the view level, allowing you to specify who can list, retrieve, create, update, or delete resources. This fine-grained control is essential for building secure applications, as it restricts actions based on user roles, authentication status, or other custom rules.\r\n\r\nDRF provides a set of built-in permission classes that cover common use cases, such as granting access to authenticated users or allowing only admin users to perform certain actions. You can apply these permission classes to individual views or viewsets using the permission_classes attribute.\r\n\r\nFor more complex scenarios, DRF's flexibility allows you to define custom permission classes by extending the BasePermission class. By leveraging permissions effectively, you can build robust APIs that cater to different user roles while maintaining data integrity and security.\r\n\r\n<hr>\r\n\r\n<strong>Setting the permission policy</strong>\r\n\r\nYou can choose not to set a general restriction for your project. By doing so, the default settings of the Djnago REST framework will allow unrestricted access.\r\n\r\nThe <code>DEFAULT_PERMISSION_CLASSES</code> is set to the permission <code>AllowAny</code>.\r\n\r\n<pre class=\"language-python\"><code>\r\n# project/settings.py\r\n\r\n'DEFAULT_PERMISSION_CLASSES': [\r\n   'rest_framework.permissions.AllowAny',\r\n]\r\n</code></pre>\r\n\r\n\r\nIn your settings.py file you can set a general restriction:\r\n\r\n<pre class=\"language-python\"><code>\r\n# project/settings.py\r\n\r\nREST_FRAMEWORK = {\r\n    'DEFAULT_PERMISSION_CLASSES': [\r\n        'rest_framework.permissions.IsAuthenticated',\r\n    ]\r\n}\r\n</code></pre>\r\n\r\nThe restriction allows only authenticated users to access your entire project.\r\n\r\nYou can also set permissions in your view. You can set a general permission in your <code>settings.py</code> and override the <code>permission_classes</code> in your view. Or you can set your permissions in your view only.\r\n\r\n\r\n<strong>How to apply a permission to a view?</strong>\r\n\r\n<pre class=\"language-python\"><code>\r\n# app/views.py\r\n\r\nclass AccountViewSet(viewsets.ModelViewSet):\r\n    queryset = Account.objects.all()\r\n    serializer_class = AccountSerializer\r\n    permission_classes = [IsAccountAdminOrReadOnly]\r\n</code></pre>\r\n\r\nYou add the permission into the <code>permission_classed</code> list in your view.\r\n\r\n\r\n<strong>How does the system work?</strong>\r\n\r\nThere is a difference between the <code>APIView</code> and the <code>ViewSet</code> and <code>GenericViewSet</code>. The <code>APIView</code> provides a very basic view that you can extend. It doesn't come with automatic permission behavior, so you need to <code>call check_object_permission</code> manually. On the other hand, ViewSets and Generic Views are built on top of <code>APIView</code> and come with more built-in functionality. They come pre-equipped with mechanisms to handle permissions for detail routes. Essentially, inside ViewSets and Generic Views, there's logic that automatically handles permission checks when it accesses an object. This is done through the use of mixins and generic classes, making it unnecessary for you to manually invoke <code>check_object_permission</code>.\r\n\r\n<strong><code>ViewSet</code> and <code>GenericView</code>:</strong>\r\n\r\nYou don't have to worry about the permissions system, you just have to implement the permissions.\r\n\r\n<strong><code>APIView</code>:</strong>\r\n\r\nIf you are using an <code>APIView</code> within your method where you get the object, call <code>self.check_object_permissions(self.request, obj)</code> immediately after you get the object and before you perform any further actions. This will ensure that the permissions checks are properly enforced before any further operations are performed on the object.\r\n\r\n<strong>Summary:</strong>\r\n\r\n<ul>\r\n<li>With an <code>APIView</code>, you must explicitly call <code>check_object_permission</code> to execute <code>has_object_permission</code> for all permission classes.</li>\r\n<li>With ViewSets (like <code>ModelViewSet</code>) or Generic Views (like <code>RetrieveAPIView</code>), <code>has_object_permission</code> is executed via <code>check_object_permission</code> inside a <code>get_object</code> method out of the box.</li>\r\n<li><code>has_object_permission</code> is never executed for list views (regardless of the view you're extending from) or when the request method is <code>POST</code> (since the object doesn't exist yet).</li>\r\n<li>When any <code>has_permission</code> returns <code>False</code>, the <code>has_object_permission</code> doesn't get checked. The request is immediately rejected.</li>\r\n</ul>\r\n\r\n<hr>\r\n\r\n<strong>1. Built-in permissions:</strong><br>Django REST Framework are several built-in permissions that you can use for controlling access to your API views.\r\n\r\n\r\n<strong>Here are the main ones:</strong>\r\n\r\n<ul>\r\n<li><strong><code>AllowAny</code></strong>: This permission class allows unrestricted access, i. e., any user can perform any operation.</li>\r\n<li><strong><code>IsAuthenticated</code></strong>: This permission only allows access to authenticated users. Anonymous users will be denied access.</li>\r\n<li><strong><code>IsAdminUser</code></strong>: Grants access only to users with the <code>is_staff</code> attribute set to <code>True</code>.</li>\r\n<li><strong><code>IsAuthenticatedOrReadOnly</code></strong>: Allow read-only access to anonymous users and full access to authenticated users.</li>\r\n<li><strong><code>DjangoModelPermissions</code></strong>: This permission ties the access level to the model-level permissions set in Django admin.</li>\r\n<li><strong><code>DjangoModelPermissionsOrAnonReadOnly</code></strong>: Similar to <code>DjangoModelPermissions</code>, but allows read-only access to anonymous users.</li>\r\n</ul>\r\n\r\nThese permissions can be applied to DRF's views and viewsets by setting the <code>permission_classes</code> attribute. For custom behaviour, you can also create your own permission classes by extending <code>BasePermission</code>.\r\n\r\n<strong>2. Custom permissions:</strong>\r\n\r\nIf you need a custom permission, you will need to override one of the two <code>BasePermission</code> methods:\r\n<ul>\r\n<li><code>.has_permission(self, request, view)</code></li>\r\n<li><code>.has_object_permission(self, request, view, obj)</code></li>\r\n</ul>\r\n\r\n\r\nThe <strong><code>has_permission()</code></strong> method checks whether a user has the permission to perform a certain action on the API resource (view) or endpoint.\r\n\r\nAnd the <strong><code>has_object_permission()</code></strong> method checks the permissions on a specific instance or object level. <strong>It is important to note that the <code>has_object_permission()</code> method is only called if the <code>has_permission()</code> method has granted access.</strong>\r\n\r\nThe method should return <code>True</code> to give access. By returning <code>False</code> a <code>PermissionDenied</code> exception will be raised.\r\n\r\nTo customise the error message that is raised when the permission is denied, you can implement a message attribute in your permission class.\r\n\r\n<pre class=\"language-python\"><code>\r\n# app/permissions.py\r\n\r\nfrom rest_framework import permissions\r\n\r\nclass CustomerAccessPermission(permissions.BasePermission):\r\n    message = 'Adding customers not allowed.'\r\n\r\n    def has_permission(self, request, view):\r\n         ...\r\n</code></pre>\r\n\r\nIn general, you will want to create permissions for read or write operations.\r\n\r\nRead operations are actions that retrieve data without modifying it. Methods such as <code>GET</code>, <code>OPTIONS</code> and <code>HEAD</code> are considered safe or read operations. These read operations (<code>GET</code>, <code>OPTIONS</code> and <code>HEAD</code>) can be checked using the <code>SAFE_METHODS</code> constant.\r\n\r\nOn the other hand, write operations are actions that change the state on the server by creating, updating or deleting data. Methods such as <code>POST</code>, <code>PUT</code>, <code>PATCH</code> and <code>DELETE</code> fall into this category.\r\n\r\n<pre class=\"language-python\"><code>\r\nif request.method in permissions.SAFE_METHODS:\r\n    # Check permissions for read-only request\r\nelse:\r\n    # Check permissions for write request\r\n</code></pre>\r\n\r\n\r\n<strong>Here are some examples:</strong>\r\n\r\n<strong>First example:</strong>\r\n\r\n<pre class=\"language-python\"><code>\r\n# app/permissions.py\r\n\r\nclass IsAuthor(BasePermission):\r\n    message = \"You have to be the author to update or delete.\"\r\n\r\n    def has_object_permission(self, request, view, obj):\r\n        if request.method in SAFE_METHODS:\r\n            return True\r\n\r\n        return obj.author == request.user\r\n</code></pre>\r\n\r\nIn this example, I have not overridden the <code>has_permission</code> method. So the general permission or the view implemented permission is evaluated for access to the view. On the other hand, I want to make sure that only the author of the object (a project, issue or comment) has the permission to update or delete this object. Read operations, for this object, are allowed for other users. If permission is denied, the message attribute is set to deliver a customised message to the user.\r\n\r\n\r\n<strong>Second example:</strong>\r\n\r\n<pre class=\"language-python\"><code>\r\n# app/permissions.py\r\n\r\nclass UserPermission(BasePermission):\r\n    def has_object_permission(self, request, view, obj):\r\n        if not request.user.is_authenticated:\r\n            return False\r\n\r\n        if view.action in [\"retrieve\", \"update\", \"partial_update\"]:\r\n            return (\r\n                obj == request.user\r\n            )  \r\n        else:\r\n            return False\r\n</code></pre>\r\n\r\nIn this example, the permission customisation is again at the object level. The first check is to see if the user is authenticated. If the user is an <code>AnonymousUser</code> (not authenticated), the permission is denied. The next check allows the user to retrieve, update or partial update their own data by verifying that specific view actions are met. All other view actions are denied.",
+    "image": "",
+    "publish": "2024-10-28T11:09:21Z",
+    "created": "2024-11-08T11:10:04.156Z",
+    "updated": "2024-12-29T12:16:43.718Z",
+    "status": "PB",
+    "author": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "What is gunicorn?",
+    "slug": "what-is-gunicorn",
+    "body": "<strong>Gunicorn</strong> (short for <strong>Green Unicorn</strong>) is a Python <strong>WSGI (Web Server Gateway Interface)</strong> HTTP server used to serve Python web applications, such as those built with <strong>Django</strong>. It plays an essential role in making your Django application production-ready by acting as a bridge between your Django app and the web, handling incoming HTTP requests, and passing them to Django for processing.\r\n\r\nHere&rsquo;s what Gunicorn does and how it fits into the Django ecosystem:\r\n\r\n<h3><a href=\"https://dev.to/doridoro/what-is-gunicorn-4n26#what-is-gunicorn\" name=\"what-is-gunicorn\"> </a> What is Gunicorn?</h3>\r\n<ul>\r\n<li><strong>Gunicorn</strong> is a <strong>pre-fork worker model</strong> WSGI server, which means it spawns multiple worker processes to handle multiple requests simultaneously, improving performance.</li>\r\n<li>It's designed to be simple, fast, and compatible with most Python web frameworks, including Django, Flask, etc.</li>\r\n<li>Gunicorn is a <strong>WSGI server</strong>&mdash;a specification that defines how a web server interacts with Python web applications. WSGI is a standard interface that enables Python applications and frameworks to communicate with web servers.</li>\r\n</ul>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/what-is-gunicorn-4n26#what-gunicorn-does-in-django\" name=\"what-gunicorn-does-in-django\"> </a> What Gunicorn Does in Django:</h3>\r\n<ol>\r\n<li><strong>Serves the Django Application</strong>:\r\n<ul>\r\n<li>When you run a Django app during development, it uses Django's built-in development server (run by <code>python manage.py runserver</code>). However, this server is not designed for production use because it&rsquo;s single-threaded, inefficient, and lacks the ability to handle multiple concurrent requests effectively.</li>\r\n<li>Gunicorn, on the other hand, is designed to handle production-level traffic by managing requests efficiently using multiple worker processes.</li>\r\n</ul>\r\n</li>\r\n<li><strong>Handles Requests</strong>:\r\n<ul>\r\n<li>When you deploy a Django application, Gunicorn acts as the <strong>application server</strong>. It listens for incoming HTTP requests and forwards them to Django, which processes them (via its views, models, etc.), and returns a response to Gunicorn.</li>\r\n<li>Gunicorn then sends the processed response back to the client.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<strong>Concurrency and Scalability</strong>:\r\n<ul>\r\n<li>Gunicorn uses a <strong>pre-fork worker model</strong>, meaning it spawns multiple worker processes. Each worker can handle requests independently, allowing the application to serve many requests concurrently, which improves performance under heavy loads.</li>\r\n<li>You can configure the number of workers Gunicorn uses based on your server&rsquo;s resources and the expected traffic. This makes the application more scalable as you can adjust the number of workers to handle more or fewer requests.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<strong>Manages Performance and Reliability</strong>:\r\n<ul>\r\n<li>Gunicorn manages worker processes and handles errors that may arise during requests. If a worker fails or crashes, Gunicorn can restart it without affecting the rest of the system, ensuring that the application remains reliable and responsive.</li>\r\n<li>It also manages things like timeouts, worker memory limits, and load balancing between workers.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/what-is-gunicorn-4n26#why-you-need-gunicorn-with-django-in-production\" name=\"why-you-need-gunicorn-with-django-in-production\"> </a> Why You Need Gunicorn with Django in Production:</h3>\r\n<ol>\r\n<li><strong>Efficiency</strong>:\r\n<ul>\r\n<li>The built-in Django development server is not optimized for handling production traffic. Gunicorn provides a far more efficient way to serve Django applications in a production environment because of its multi-process model.</li>\r\n</ul>\r\n</li>\r\n<li><strong>Concurrency</strong>:\r\n<ul>\r\n<li>Gunicorn can serve many requests at once by using multiple workers, allowing your Django app to handle more users simultaneously.</li>\r\n</ul>\r\n</li>\r\n<li><strong>Integration with Web Servers</strong>:\r\n<ul>\r\n<li>Gunicorn is often used in conjunction with a web server like <strong>Nginx</strong>. In such a setup, Nginx handles static files (images, CSS, JavaScript) and acts as a reverse proxy, forwarding dynamic requests to Gunicorn, which then communicates with Django.</li>\r\n<li>This combination of Nginx and Gunicorn is a common deployment pattern in Django applications for production.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n\r\n<h3><a href=\"https://dev.to/doridoro/what-is-gunicorn-4n26#how-gunicorn-works-with-django\" name=\"how-gunicorn-works-with-django\"> </a> How Gunicorn Works with Django:</h3>\r\n\r\n<strong>1. Installing Gunicorn</strong>: You can install Gunicorn via pip:\r\n\r\n<pre class=\"language-python\"><code>\r\npip install gunicorn\r\n</code></pre>\r\n\r\n<strong>2. Running Gunicorn</strong>: You can run your Django application using Gunicorn by navigating to your project&rsquo;s directory and running:\r\n\r\n<pre class=\"language-markup\"><code>\r\ngunicorn myproject.wsgi:application\r\n</code></pre>\r\n\r\nHere, <code>myproject.wsgi:application</code> tells Gunicorn to use the WSGI application defined in Django&rsquo;s <code>wsgi.py</code> file. Django uses WSGI as the interface between the web server and the application.\r\n\r\n<strong>3. Configuring Gunicorn</strong>: \r\n\r\nYou can configure various settings, such as the number of workers, binding address, and timeout using command-line arguments or configuration files. For example:\r\n\r\n<pre class=\"language-python\"><code>\r\ngunicorn --workers 3 myproject.wsgi:application\r\n</code></pre>\r\n\r\nThis command starts Gunicorn with 3 worker processes, allowing it to handle multiple requests simultaneously.\r\n\r\n<h3><a href=\"https://dev.to/doridoro/what-is-gunicorn-4n26#summary-of-gunicorns-role\" name=\"summary-of-gunicorns-role\"> </a> Summary of Gunicorn&rsquo;s Role:</h3>\r\n<ul>\r\n<li><strong>Gunicorn</strong> is a WSGI HTTP server for Python web applications, including Django.</li>\r\n<li>It serves as the <strong>interface between Django</strong> and the web, handling requests and passing them to Django for processing.</li>\r\n<li>It uses <strong>multiple worker processes</strong> to handle concurrent requests, making it suitable for production environments.</li>\r\n<li>It works well alongside <strong>Nginx</strong> to serve static files and manage traffic efficiently.</li>\r\n</ul>\r\n\r\nBy using Gunicorn, you make your Django application more efficient, scalable, and capable of handling real-world traffic in production.",
+    "image": "",
+    "publish": "2024-09-27T11:10:24Z",
+    "created": "2024-11-08T11:10:57.545Z",
+    "updated": "2024-12-29T12:34:10.625Z",
+    "status": "PB",
+    "author": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Add URL pattern to access the \"/\" home page",
+    "slug": "add-url-pattern-to-access-the-home-page",
+    "body": "In my Django blog project, when running the development server, I ended up with an error: \"404 - Page not found\". This is not surprising as I have no URL pattern configured for the \"/\" URL. Each time I have to manually type \"/blog/\" to access my blog's front page.\r\n\r\nHow can I change this?\r\n\r\nThere are several ways to deal with this kind of problem. To make your Django project accessible at the root URL \"/\", you need to update your urls.py configuration to include a redirect or make the blog view accessible directly at the root. Here's how to do it:\r\n\r\n**1. Solution:**\r\n\r\nIf you want the root URL \"/\" to automatically redirect users to \"/blog/\", you can use Django's RedirectView. Update your urls.py file like this:\r\n\r\n<pre class=\"language-python\"><code>\r\n# blog_project/urls.py\r\n\r\nfrom django.urls import path, include\r\nfrom django.views.generic.base import RedirectView\r\n\r\n\r\nurlpatterns = [\r\n    path(\"admin/\", admin.site.urls),\r\n    path(\"blog/\", include(\"blog.urls\", namespace=\"blog\")),\r\n    path(\"\", RedirectView.as_view(url=\"/blog/\", permanent=True)),\r\n    ]\r\n</code></pre>\r\n    \r\nThis configuration redirects the root URL \"/\" to \"/blog/\", ensuring users are forwarded to the correct page without manually typing the \"/blog/\".\r\n\r\n\r\n**2. Solution:**\r\n\r\nIf you want the blog's main view to be accessible directly at \"/\", you can include the blog's URL configuration at the root:\r\n\r\n<pre class=\"language-python\"><code>\r\n# blog_project/urls.py\r\n\r\nfrom django.contrib import admin\r\nfrom django.urls import path, include\r\n\r\nurlpatterns = [\r\n    path('admin/', admin.site.urls),\r\n    path('', include('blog.urls')),\r\n]\r\n</code></pre>\r\n\r\nThen, in your blog app's urls.py, ensure that the primary view (like the blog homepage) handles the root URL by having an empty path:\r\n\r\n<pre class=\"language-python\"><code>\r\n# blog/urls.py\r\n\r\nfrom django.urls import path\r\nfrom . import views\r\n\r\nurlpatterns = [\r\n    path('', views.blog_home, name='blog_home'),\r\n]\r\n</code></pre>\r\n\r\nThis approach avoids redirects and directly serves the blog homepage when users visit \"/\".\r\n\r\n\r\nWhich Option to Choose?\r\n\r\n<ul>\r\n<li><strong>Use Option 1</strong> (Redirect) if you want to keep \"/blog/\" as the primary endpoint and just forward root visitors to it.</li>\r\n<li><strong>Use Option 2</strong> (Direct Mapping) if you want your blog homepage to be directly accessible at \"/\".</li>\r\n</ul>\r\n\r\nBoth solutions will work seamlessly in development and production. Choose the one that aligns best with your intended site structure.",
+    "image": "",
+    "publish": "2024-12-29T11:55:01Z",
+    "created": "2024-12-29T11:57:53.219Z",
+    "updated": "2024-12-29T12:47:36.965Z",
+    "status": "PB",
+    "author": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 9,
+  "fields": {
+    "title": "Test title",
+    "slug": "test-title",
+    "body": "<p>Test content</p>",
+    "image": "",
+    "publish": "2025-01-06T16:09:08Z",
+    "created": "2025-01-06T16:09:08.121Z",
+    "updated": "2025-01-13T18:49:49.836Z",
+    "status": "DF",
+    "author": 2
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "body": "Test comment",
+    "created": "2024-10-09T14:23:22.593Z",
+    "updated": "2024-10-09T14:23:22.594Z",
+    "active": true,
+    "user": 1,
+    "post": 2
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "body": "thank you",
+    "created": "2024-10-09T15:32:01.153Z",
+    "updated": "2024-10-09T15:32:01.153Z",
+    "active": true,
+    "user": 2,
+    "post": 2
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "body": "another test",
+    "created": "2024-10-09T15:33:36.606Z",
+    "updated": "2024-10-09T15:33:36.606Z",
+    "active": true,
+    "user": 1,
+    "post": 2
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 4,
+  "fields": {
+    "body": "let's see",
+    "created": "2024-10-09T15:39:09.566Z",
+    "updated": "2024-10-09T15:39:09.566Z",
+    "active": true,
+    "user": 1,
+    "post": 2
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 5,
+  "fields": {
+    "body": "let's see",
+    "created": "2024-10-09T15:39:56.269Z",
+    "updated": "2024-10-09T15:39:56.269Z",
+    "active": true,
+    "user": 1,
+    "post": 2
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 6,
+  "fields": {
+    "body": "That is my first comment.",
+    "created": "2024-10-15T14:44:08.215Z",
+    "updated": "2024-10-15T14:44:08.215Z",
+    "active": true,
+    "user": 2,
+    "post": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 7,
+  "fields": {
+    "body": "cool",
+    "created": "2024-11-15T11:28:47.500Z",
+    "updated": "2024-11-15T11:28:47.500Z",
+    "active": true,
+    "user": 2,
+    "post": 4
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 8,
+  "fields": {
+    "body": "Let's try the first comment!",
+    "created": "2024-11-26T12:15:19.309Z",
+    "updated": "2024-11-26T12:15:19.309Z",
+    "active": true,
+    "user": 2,
+    "post": 5
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 9,
+  "fields": {
+    "body": "Check",
+    "created": "2024-11-26T13:19:58.152Z",
+    "updated": "2024-11-26T13:19:58.152Z",
+    "active": true,
+    "user": 1,
+    "post": 5
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 10,
+  "fields": {
+    "body": "Add the first comment",
+    "created": "2024-12-30T11:43:25.802Z",
+    "updated": "2024-12-30T11:43:25.802Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 11,
+  "fields": {
+    "body": "The comment is working",
+    "created": "2024-12-30T11:47:27.321Z",
+    "updated": "2024-12-30T11:47:27.321Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 12,
+  "fields": {
+    "body": "The comment is working",
+    "created": "2024-12-30T11:48:51.450Z",
+    "updated": "2024-12-30T11:48:51.450Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 13,
+  "fields": {
+    "body": "The comment is working",
+    "created": "2024-12-30T11:49:35.623Z",
+    "updated": "2024-12-30T11:49:35.623Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 14,
+  "fields": {
+    "body": "The comment is working",
+    "created": "2024-12-30T11:51:44.428Z",
+    "updated": "2024-12-30T11:51:44.428Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 15,
+  "fields": {
+    "body": "The comment is working",
+    "created": "2024-12-30T11:52:26.400Z",
+    "updated": "2024-12-30T11:52:26.400Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 16,
+  "fields": {
+    "body": "The comment is working",
+    "created": "2024-12-30T12:02:01.518Z",
+    "updated": "2024-12-30T12:02:01.518Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 17,
+  "fields": {
+    "body": "Great",
+    "created": "2024-12-30T12:17:29.439Z",
+    "updated": "2024-12-30T12:17:29.439Z",
+    "active": true,
+    "user": 1,
+    "post": 5
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 18,
+  "fields": {
+    "body": "Great",
+    "created": "2024-12-30T13:17:18.502Z",
+    "updated": "2024-12-30T13:17:18.502Z",
+    "active": true,
+    "user": 1,
+    "post": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 19,
+  "fields": {
+    "body": "Great",
+    "created": "2024-12-30T13:18:32.412Z",
+    "updated": "2024-12-30T13:18:32.412Z",
+    "active": true,
+    "user": 1,
+    "post": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 20,
+  "fields": {
+    "body": "test",
+    "created": "2025-01-01T16:35:12.912Z",
+    "updated": "2025-01-01T16:35:12.912Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 21,
+  "fields": {
+    "body": "test",
+    "created": "2025-01-01T16:36:13.771Z",
+    "updated": "2025-01-01T16:36:13.771Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 22,
+  "fields": {
+    "body": "test",
+    "created": "2025-01-01T16:40:08.667Z",
+    "updated": "2025-01-01T16:40:08.667Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 23,
+  "fields": {
+    "body": "test",
+    "created": "2025-01-01T16:41:38.618Z",
+    "updated": "2025-01-01T16:41:38.618Z",
+    "active": true,
+    "user": 1,
+    "post": 7
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 24,
+  "fields": {
+    "body": "Last check",
+    "created": "2025-01-01T22:44:55.593Z",
+    "updated": "2025-01-01T22:44:55.593Z",
+    "active": true,
+    "user": 1,
+    "post": 5
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 25,
+  "fields": {
+    "body": "Super article",
+    "created": "2025-01-04T16:09:20.673Z",
+    "updated": "2025-01-04T16:09:20.673Z",
+    "active": true,
+    "user": 4,
+    "post": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 26,
+  "fields": {
+    "body": "Super article",
+    "created": "2025-01-04T16:11:23.701Z",
+    "updated": "2025-01-04T16:11:23.701Z",
+    "active": true,
+    "user": 4,
+    "post": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 27,
+  "fields": {
+    "body": "Super article",
+    "created": "2025-01-04T16:13:00.614Z",
+    "updated": "2025-01-04T16:13:00.614Z",
+    "active": true,
+    "user": 4,
+    "post": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 28,
+  "fields": {
+    "body": "Super article",
+    "created": "2025-01-04T16:13:42.006Z",
+    "updated": "2025-01-04T16:13:42.006Z",
+    "active": true,
+    "user": 4,
+    "post": 1
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "django-model",
+    "slug": "django-model"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "django-rest-framework",
+    "slug": "django-rest-framework"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "gunicorn",
+    "slug": "gunicorn"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "environment-variables",
+    "slug": "environment-variables"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "URL patterns",
+    "slug": "url-patterns"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 4,
+    "content_type": 7,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 5,
+    "content_type": 7,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 3,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 4,
+    "content_type": 8,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 16,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 17,
+  "fields": {
+    "tag": 5,
+    "content_type": 8,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 18,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 19,
+  "fields": {
+    "tag": 2,
+    "content_type": 8,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 20,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 21,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 22,
+  "fields": {
+    "tag": 3,
+    "content_type": 8,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 23,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 24,
+  "fields": {
+    "tag": 6,
+    "content_type": 8,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 25,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 9
+  }
+}
+]
